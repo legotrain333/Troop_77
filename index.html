@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Troop 77 - Boy Scouts of America</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <!-- Font Awesome for icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-papm6Qv1QwQK1QwQK1QwQK1QwQK1QwQK1QwQK1QwQK1QwQK1QwQK1QwQK1QwQK1QwQK1QwQK1QwQK1QwQK1Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background: linear-gradient(135deg, #e2eafc 0%, #b6ccfe 100%);
+            margin: 0;
+            padding: 0;
+        }
+        .hero {
+            background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+            min-height: 340px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            position: relative;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            left: 0; right: 0; top: 0; bottom: 0;
+            background: rgba(0,47,108,0.55);
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: #fff;
+            text-align: center;
+            padding-bottom: 2.5rem;
+        }
+        .bsa-logo {
+            width: 90px;
+            height: 90px;
+            margin-bottom: 0.5rem;
+        }
+        .troop-title {
+            font-size: 2.7rem;
+            font-weight: 700;
+            margin: 0;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+        }
+        .subtitle {
+            font-size: 1.2rem;
+            font-weight: 400;
+            margin-top: 0.5rem;
+            color: #ffd700;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+        }
+        .social-icons {
+            margin-top: 1.2rem;
+            display: flex;
+            justify-content: center;
+            gap: 1.2rem;
+        }
+        .social-icons a {
+            color: #fff;
+            font-size: 1.7rem;
+            transition: color 0.2s;
+        }
+        .social-icons a:hover {
+            color: #ffd700;
+        }
+        nav {
+            background: #00509e;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            padding: 1.2rem 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            letter-spacing: 1px;
+            font-size: 1.1rem;
+            transition: color 0.2s, background 0.2s;
+            padding: 0.5rem 1.2rem;
+            border-radius: 4px;
+        }
+        nav a:hover {
+            color: #002f6c;
+            background: #ffd700;
+        }
+        main {
+            max-width: 1050px;
+            margin: 2.5rem auto;
+            background: #fff;
+            padding: 2.5rem 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+        }
+        .motto {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            color: #002f6c;
+            text-align: center;
+            font-style: italic;
+        }
+        .quick-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-bottom: 2.5rem;
+        }
+        .quick-links a {
+            background: #ffd700;
+            color: #002f6c;
+            padding: 0.85rem 1.7rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 1.05rem;
+            font-weight: 700;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+            transition: background 0.2s, color 0.2s;
+        }
+        .quick-links a:hover {
+            background: #00509e;
+            color: #fff;
+        }
+        section {
+            margin-bottom: 2.2rem;
+        }
+        section h2 {
+            color: #00509e;
+            margin-bottom: 0.7rem;
+        }
+        section p {
+            color: #333;
+        }
+        .eagle-section {
+            background: #e2eafc;
+            border-radius: 10px;
+            padding: 2rem 1rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem 1.2rem;
+            justify-items: center;
+            align-items: start;
+        }
+        @media (max-width: 700px) {
+            .eagle-section {
+                grid-template-columns: 1fr;
+                gap: 1.2rem 0.5rem;
+                padding: 1.2rem 0.3rem;
+            }
+            .eagle-card {
+                min-width: 0;
+                max-width: 98vw;
+                width: 100%;
+            }
+        }
+        
+        .eagle-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            padding: 1.2rem 1.2rem 1.5rem 1.2rem;
+            min-width: 0;
+            max-width: 320px;
+            width: 100%;
+            box-sizing: border-box;
+            max-width: 260px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .eagle-card h3 {
+            font-size: 1.1rem;
+            color: #00509e;
+            margin: 0.5rem 0 0.2rem 0;
+        }
+        .eagle-card p {
+            font-size: 0.97rem;
+            color: #333;
+            margin: 0.2rem 0 0.5rem 0;
+        }
+        .eagle-card .date {
+            font-size: 0.9rem;
+            color: #888;
+        }
+        .eagle-card img {
+            width: 140px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 0.7rem;
+            border: 2px solid #00509e;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+        }
+        .bsa-badge {
+            width: 40px;
+            height: 40px;
+            margin-top: 0.3rem;
+        }
+        footer {
+            background: #002f6c;
+            color: #fff;
+            text-align: center;
+            padding: 1.2rem 0;
+            margin-top: 2.5rem;
+            font-size: 1rem;
+            letter-spacing: 1px;
+        }
+        @media (max-width: 900px) {
+            .eagle-section {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        @media (max-width: 700px) {
+            main {
+                padding: 1rem 0.5rem;
+            }
+            nav {
+                gap: 1rem;
+                font-size: 0.95rem;
+            }
+            .bsa-logo {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="hero-content">
+            <img src="BSA_Logo.webp" alt="BSA Logo" class="bsa-logo">
+            <h1 class="troop-title">Troop 77</h1>
+            <div class="subtitle">Boy Scouts of America &mdash; Reverent, Prepared, and United</div>
+        </div>
+    </div>
+    
+    <main>
+        <div class="motto">
+            "A Scout is reverent toward God. He is faithful in his religious duties. He respects the beliefs of others."
+        </div>
+        
+        <div class="quick-links">
+            <a href="https://www.facebook.com/groups/133137243444638/" title="Visit our Facebook page" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-square" style="margin-right:0.5em;"></i>Facebook</a>
+            <a href="http://www.bsatroop77.com/webmail" title="Check your Webmail" target="_blank" rel="noopener"><img src="BSA_Logo.webp" alt="BSA Logo" style="height:1em;vertical-align:middle;margin-right:0.5em;">Webmail</a>
+            <a href="https://scoutbook.scouting.org/mobile/" title="ScoutBook Login" target="_blank" rel="noopener"><img src="https://scoutbook.scouting.org/favicon.ico" alt="ScoutBook" style="height:1em;vertical-align:middle;margin-right:0.5em;">ScoutBook</a>
+        </div>
+        <div class="section-cards">
+                        <div class="card" id="campouts">
+            <h3>Campouts</h3>
+            <p><a href="campouts.html">See upcoming adventures and sign up!</a></p>
+                        </div>
+            <div class="card" id="photos">
+                <h3>Photos</h3>
+                <p><a href="#photos">Browse our troop photo gallery.</a></p>
+            </div>
+            <div class="card" id="calendars">
+                <h3>Calendars</h3>
+                <p><a href="#calendars">Check the troop calendar for events.</a></p>
+            </div>
+            <div class="card" id="links">
+                <h3>Links</h3>
+                <p><a href="links.html">Helpful resources for scouts & parents.</a></p>
+            </div>
+            <div class="card" id="committee">
+                <h3>Committee</h3>
+                <p><a href="committee.html">Meet our troop committee.</a></p>
+            </div>
+            <div class="card" id="scoutmaster">
+                <h3>Scoutmaster</h3>
+                <p><a href="Scoutmaster.html">Learn about our Scoutmaster.</a></p>
+            </div>
+            <div class="card" id="scouts">
+                <h3>Scouts</h3>
+                <p><a href="scouts.html">Info for all Troop 77 scouts.</a></p>
+            </div>
+            <div class="card" id="fundraising">
+                <h3>Fundraising</h3>
+                <p><a href="fundraising.html">Support our troop's activities.</a></p>
+            </div>
+            <div class="card" id="about">
+                <h3>About Us</h3>
+                <p><a href="about.html">Who we are and what we do.</a></p>
+            </div>
+        </div>
+    <h2 style="text-align:center; color:#00509e; margin-top:2.5rem; margin-bottom:1.2rem; letter-spacing:1px;">Troop 77 Eagle Scouts</h2>
+    <div class="eagle-section">
+            <div class="eagle-card">
+                <img src="eagle_photos\ZacharyTaylorEagleSM.jpg" alt="Eagle Scout Zachary Taylor" class="bsa-badge">
+                <h3>Congratulations to Eagle Scout<br>Zachary Taylor</h3>
+                <p class="date">8/10/22</p>
+            </div>
+            <div class="eagle-card">
+                <img src="eagle_photos\CooperBurdenEagleSM.jpg" alt="Eagle Scout Cooper Burden" class="bsa-badge">
+                <h3>Congratulations to Eagle Scout<br>Cooper Burden</h3>
+                <p class="date">6/6/22</p>
+            </div>
+            <div class="eagle-card">
+                <img src="eagle_photos\YanniTsiabasisEagleSMnew.jpg" alt="Eagle Scout Hanni Tsibanas" class="bsa-badge">
+                <h3>Congratulations to Eagle Scout<br>Hanni Tsibanas</h3>
+                <p class="date">12/02/22</p>
+            </div>
+            <div class="eagle-card">
+                <img src="eagle_photos\EvanKnoopEagleSMnew.jpg" alt="Eagle Scout Evan Knoop" class="bsa-badge">
+                <h3>Congratulations to Eagle Scout<br>Evan Knoop</h3>
+                <p class="date">6/9/21</p>
+            </div>
+             <div class="eagle-card">
+                <img src="eagle_photos\DemetriAthanasoulisEagleSMnew.jpg" alt="Eagle Scout Evan Knoop" class="bsa-badge">
+                <h3>Congratulations to Eagle Scout<br>Demetrios Athanasoulis</h3>
+                <p class="date">5/21/21</p>
+            </div>
+               <div class="eagle-card">
+                <img src="eagle_photos\TrentonEaglesmnew.jpg" alt="Eagle Scout Evan Knoop" class="bsa-badge">
+                <h3>Congratulations to Eagle Scout<br>Trenton Doherty</h3>
+                <p class="date">3/24/21</p>
+            </div>
+               <div class="eagle-card">
+                <img src="eagle_photos\GeoffEaglesmnew.jpg" alt="Eagle Scout Evan Knoop" class="bsa-badge">
+                <h3>Congratulations to Eagle Scout<br>Geoff Dziena</h3>
+                <p class="date">1/2/21</p>
+            </div>
+            
+        </div>
+    <style>
+    .section-cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+        margin-bottom: 2.5rem;
+    }
+    .card {
+        background: #f7faff;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+        padding: 1.5rem 1.2rem;
+        min-width: 200px;
+        max-width: 220px;
+        text-align: center;
+        flex: 1 1 200px;
+        transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .card:hover {
+        transform: translateY(-6px) scale(1.03);
+        box-shadow: 0 6px 18px rgba(0,80,158,0.13);
+        background: #e2eafc;
+    }
+    .card-icon {
+        font-size: 2.2rem;
+        color: #00509e;
+        margin-bottom: 0.7rem;
+        display: block;
+    }
+    .card h3 {
+        margin: 0.5rem 0 0.3rem 0;
+        color: #003366;
+        font-size: 1.2rem;
+    }
+    .card p {
+        margin: 0.2rem 0 0 0;
+        font-size: 1rem;
+    }
+    .card a {
+        color: #00509e;
+        text-decoration: underline;
+        font-weight: 500;
+    }
+    .card a:hover {
+        color: #002f6c;
+    }
+    @media (max-width: 900px) {
+        .section-cards {
+            gap: 1rem;
+        }
+        .card {
+            min-width: 160px;
+            max-width: 100%;
+        }
+    }
+    @media (max-width: 600px) {
+        .section-cards {
+            flex-direction: column;
+            align-items: center;
+        }
+        .card {
+            width: 90%;
+        }
+    }
+    </style>
+    </main>
+    <footer>
+        <div style="margin-bottom:0.5rem;">
+            <img src="BSA_Logo.webp" alt="BSA Logo" style="height:32px;vertical-align:middle;margin-right:0.5rem;">
+            <span style="font-weight:700;">Boy Scouts of America</span>
+        </div>
+        &copy; 2025 Troop 77. All rights reserved. | "Be Prepared!"
+    </footer>
+    <!-- Font Awesome for social icons -->
+    <script src="https://kit.fontawesome.com/7c2e8e2e2a.js" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troop 77 Committee</title>
+    <link rel="icon" type="image/webp" href="BSA_Logo.webp">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background: linear-gradient(135deg, #e2eafc 0%, #b6ccfe 100%);
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat, #002f6c;
+            color: #fff;
+            padding: 2.5rem 0 1.5rem 0;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 2px 12px rgba(0,47,108,0.10);
+        }
+        header::after {
+            content: '';
+            position: absolute;
+            left: 0; right: 0; top: 0; bottom: 0;
+            background: rgba(0,47,108,0.55);
+            z-index: 1;
+        }
+        header > * {
+            position: relative;
+            z-index: 2;
+        }
+        .bsa-logo-header {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 0.5rem;
+            background: #fff;
+            border-radius: 50%;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+            object-fit: contain;
+        }
+        header h1 {
+            font-size: 2.3rem;
+            font-weight: 700;
+            margin: 0.7rem 0 0 0;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+        }
+        .bsa-logo-header {
+            width: 70px;
+            height: 70px;
+            margin-bottom: 0.5rem;
+            background: #fff;
+            border-radius: 50%;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+            object-fit: contain;
+        }
+        .motto {
+            font-size: 1.15rem;
+            color: #003366;
+            text-align: center;
+            margin: 2rem auto 2.5rem auto;
+            font-style: italic;
+            background: #f7faff;
+            border-radius: 12px;
+            max-width: 750px;
+            padding: 1.2rem 1.5rem 1.5rem 1.5rem;
+            box-shadow: 0 4px 18px rgba(0,47,108,0.08);
+        }
+        main {
+            max-width: 1050px;
+            margin: 0 auto 2.5rem auto;
+            background: #fff;
+            padding: 2.5rem 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+        }
+        h2 {
+            color: #00509e;
+            margin-top: 2.2rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #e2eafc;
+            padding-bottom: 0.3rem;
+        }
+        h3 {
+            color: #003366;
+            margin-top: 2rem;
+            margin-bottom: 0.7rem;
+        }
+        ul, ol {
+            margin: 0 0 1.2rem 1.5rem;
+        }
+        .role-section {
+            margin-bottom: 2.2rem;
+        }
+        .committee-list {
+            margin: 1.2rem 0 2.2rem 0;
+            padding: 0;
+            list-style: none;
+        }
+        .committee-list li {
+            margin-bottom: 0.5em;
+            font-size: 1.07rem;
+        }
+        .role-title {
+            font-weight: 700;
+            color: #00509e;
+            margin-top: 1.5rem;
+            margin-bottom: 0.3rem;
+            font-size: 1.13rem;
+        }
+        .divider {
+            border-top: 1.5px solid #b6ccfe;
+            margin: 2.2rem 0 1.2rem 0;
+        }
+        .back-home-bar {
+            text-align: left;
+            max-width: 1050px;
+            margin: 0 auto 0.5rem auto;
+            padding-left: 1.2rem;
+        }
+        .back-home-btn {
+            display: inline-flex;
+            align-items: center;
+            background: #00509e;
+            color: #fff;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 1.08rem;
+            border-radius: 6px;
+            padding: 0.5em 1.2em 0.5em 1em;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+            margin-top: 0.5rem;
+            transition:background 0.2s, color 0.2s;
+            border: none;
+            cursor: pointer;
+            gap: 0.5em;
+        }
+        .back-home-btn:hover {
+            background: #ffd700;
+            color: #002f6c;
+        }
+        .email {
+            color: #00509e;
+            text-decoration: underline;
+            font-size: 0.98em;
+        }
+        .subsection {
+            margin-left: 1.5rem;
+        }
+        @media (max-width: 700px) {
+            main {
+                padding: 1rem 0.3rem;
+            }
+            .bsa-logo-header {
+                width: 48px;
+                height: 48px;
+            }
+            header h1 {
+                font-size: 1.2rem;
+            }
+            .motto {
+                font-size: 0.98rem;
+                padding: 0.7rem 0.3rem 1rem 0.3rem;
+            }
+            .section-block {
+                padding: 1.2rem 0.5rem 1rem 0.5rem;
+            }
+            .committee-nav a {
+                padding: 0.5rem 0.7rem;
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="back-home-bar">
+            <a href="index.html" class="back-home-btn">
+                <img src="BSA_Logo.webp" alt="BSA Logo" style="height:1.3em;width:1.3em;vertical-align:middle;margin-right:0.5em;border-radius:50%;background:#fff;box-shadow:0 1px 4px rgba(0,0,0,0.10);"> Back to Home
+            </a>
+        </div>
+        <img src="BSA_Logo.webp" alt="BSA Logo" class="bsa-logo-header">
+        <h1>BSA Troop 77 Committee</h1>
+        <nav class="committee-nav">
+            <a href="#members">Committee Members</a>
+            <a href="#roles">Roles</a>
+            <a href="#minutes">Minutes & Documents</a>
+        </nav>
+    </header>
+    <style>
+    .committee-nav {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin: 1.2rem 0 0.5rem 0;
+        z-index: 3;
+        position: relative;
+    }
+    .committee-nav a {
+        background: #00509e;
+        color: #fff;
+        padding: 0.7rem 1.5rem;
+        border-radius: 6px;
+        text-decoration: none;
+        font-size: 1.05rem;
+        font-weight: 700;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+        transition: background 0.2s, color 0.2s;
+    }
+    .committee-nav a:hover {
+        background: #ffd700;
+        color: #002f6c;
+    }
+    </style>
+    <main>
+    <section class="section-block">
+      <h2 id="members">BSA Troop 77 Committee Members</h2>
+      <ul class="committee-list">
+          <li><b>Committee Chair</b> - Deb VanSickle (<a href="mailto:DVanSickle-cm@bsatroop77.com" class="email">DVanSickle-cm@bsatroop77.com</a>)</li>
+          <li><b>Secretary</b> - Bill Anthanasoulis (<a href="mailto:BAthanasoulis-cm@bsatroop77.com" class="email">BAthanasoulis-cm@bsatroop77.com</a>)</li>
+      </ul>
+      <div class="role-title">Finance Sub-Committee</div>
+      <ul class="committee-list">
+          <li><b>Troop Treasurer</b> - Molly Cutler (<a href="mailto:MLegg-cm@bsatroop77.com" class="email">MLegg-cm@bsatroop77.com</a>)</li>
+          <li><b>Troop Fundraising Coordinator</b> - Bree Noel (<a href="mailto:BNoel-cm@bsatroop77.com" class="email">BNoel-cm@bsatroop77.com</a>)</li>
+          <li><b>Troop Membership Coordinator</b> - Harmonie Blankenship (<a href="mailto:HBlankenship-cm@bsatroop77.com" class="email">HBlankenship-cm@bsatroop77.com</a>)</li>
+          <li><b>Members</b> - Darlene Reyes (<a href="mailto:DReyes-cm@bsatroop77.com" class="email">DReyes-cm@bsatroop77.com</a>)</li>
+      </ul>
+      <div class="role-title">Advancement Sub-Committee</div>
+      <ul class="committee-list">
+          <li><b>Troop Advancement Chair</b> - Caroline Johnson (<a href="mailto:CJohnson-cm@bsatroop77.com" class="email">CJohnson-cm@bsatroop77.com</a>)</li>
+          <li><b>Court of Honor Coordinator</b> - Kate Taylor (<a href="mailto:CTaylor-cm@bsatroop77.com" class="email">CTaylor-cm@bsatroop77.com</a>)</li>
+          <li><b>Life to Eagle Coordinator</b> - Mike Hruska (<a href="mailto:MHruska-cm@bsatroop77.com" class="email">MHruska-cm@bsatroop77.com</a>)</li>
+          <li><b>Member</b> - Randi Fuchs (<a href="mailto:RFuchs-cm@bsatroop77.com" class="email">RFuchs-cm@bsatroop77.com</a>)</li>
+          <li><b>Member</b> - Geoff Borree (<a href="mailto:GBorree-asm@bsatroop77.com" class="email">GBorree-asm@bsatroop77.com</a>)</li>
+      </ul>
+      <div class="role-title">Troop Program/Activities Sub-Committee</div>
+      <ul class="committee-list">
+          <li><b>Activities Chair</b> - Cait Hawkins (<a href="mailto:CHawkins-cm@bsatroop77.com" class="email">CHawkins-cm@bsatroop77.com</a>)</li>
+          <li><b>Community Service Coordinator</b> - Irene O'Brien (<a href="mailto:IObrien-cm@bsatroop77.com" class="email">IObrien-cm@bsatroop77.com</a>)</li>
+          <li><b>Troop Equipment Coordinator</b> - Jim Santoli (<a href="mailto:JSantoli-cm@bsatroop77.com" class="email">JSantoli-cm@bsatroop77.com</a>)</li>
+          <li><b>Troop Training Coordinator</b> - Dave Thomas (<a href="mailto:DThomas-cm@bsatroop77.com" class="email">DThomas-cm@bsatroop77.com</a>)</li>
+          <li><b>Member</b> - Amy Hashman (<a href="mailto:AHashman-cm@bsatroop77.com" class="email">AHashman-cm@bsatroop77.com</a>)</li>
+      </ul>
+    </section>
+  
+    <section class="section-block">
+      <h2 id="roles">Roles</h2>
+      <div class="role-section">
+          <p>The Boy Scout Troop Committee is responsible for conducting the business of the troop. Advises the Scoutmaster on policies relating to Boy Scouting and the chartered organization. Supports the Scoutmaster and Scouts in carrying out the outdoor program and other planned activities. Is responsible for finances, adequate funds, and disbursements in line with the approved budget. Ensures the troop has an outdoor program (minimum 10 days and nights per year). Serves on boards of review and supports courts of honor. The committee consists of parent volunteers who fulfill various roles on the committee and its various sub-committees.</p>
+      </div>
+      <div class="role-section">
+          <div class="role-title">Troop Committee Chairperson</div>
+          <ul>
+              <li>Responsible for overseeing the Troop is compliant with all BSA rules and regulations.</li>
+              <li>Organizes and runs monthly committee meetings</li>
+              <li>Reviews annual re-charter process</li>
+              <li>The unit committee chair is appointed by the chartered organization and registered as an adult leader of the BSA. The unit committee chairman appoints and supervises the unit committee and unit leaders.</li>
+              <li>Prepares annual Troop calendar</li>
+              <li>Appoints the Scoutmaster</li>
+          </ul>
+      </div>
+      <div class="role-section">
+          <div class="role-title">Troop Secretary</div>
+          <ul>
+              <li>Keep minutes of meetings and publish committee meeting notices.</li>
+              <li>At each committee meeting, report the minutes of the previous meetings.</li>
+              <li>Sends out monthly agenda and minutes from prior meeting prior to each meeting.</li>
+              <li>Work with the troop committee to publicize troop activities, including Courts of Honor, Open houses, Money earning projects, School Night for Scouting and all other activities the troop participates in that its members or the community should know about.</li>
+              <li>Maintains official copies of troop records including By-Laws, meeting minutes and agendas, and policy or guideline documentation.</li>
+          </ul>
+      </div>
+      <div class="role-section">
+          <div class="role-title">Finance Sub-Committee</div>
+          <p>The sub-committee of the Troop Committee that establishes a Troop budget, estimates annual participation cost in the Troop program, and reports the Troop’s financial status. The finance sub-committee also plans and coordinates fundraising activities for the troop. The committee is led by the Troop Treasurer.</p>
+      </div>
+      <div class="role-section subsection">
+          <div class="role-title">Troop Treasurer</div>
+          <ul>
+              <li>Handle all troop funds. Pay bills on recommendation of the Scoutmaster and the authorization of the troop committee.</li>
+              <li>Records and maintains Scout accounts with monthly updates to Scouts and parents.</li>
+              <li>Maintain checking and savings accounts.</li>
+              <li>Issues checks to pay Troop expenses</li>
+              <li>Lead in the preparation of the annual troop budget.</li>
+              <li>Prepare the final checks to support the annual re-chartering process.</li>
+          </ul>
+      </div>
+      <div class="role-section subsection">
+          <div class="role-title">Troop Fundraising Coordinator</div>
+          <ul>
+              <li>Responsible for coordinating all fundraising events for the Troop, currently two pancake breakfast/carwash events.</li>
+              <li>Complete BSA fundraising application and submit to council for approval</li>
+              <li>Print tickets / signage</li>
+              <li>Track weekly sales progress, collect monies and report progress at Monthly committee meetings.</li>
+              <li>Coordinate the purchase of necessary supplies prior to fundraising events</li>
+              <li>Provide a detailed fundraising summary to Treasurer within a week of the events conclusion.</li>
+              <li>Lead the Friends of Scouting campaign.</li>
+              <li>Assist the Treasurer as needed</li>
+          </ul>
+      </div>
+      <div class="role-section subsection">
+          <div class="role-title">Troop Membership Coordinator</div>
+          <ul>
+              <li>Plan, organize and lead annual troop re-chartering process.</li>
+              <li>Ensure the Quality Unit Award paperwork is completed and submitted in coordination with the re-charter process.</li>
+              <li>Responsible for overseeing the smooth transition of new Scouts into the Troop.</li>
+              <li>Coordinate membership committee attendance at all troop meetings to handle the application of new Scouts.</li>
+              <li>Collect Applications/fees from new members</li>
+              <li>Coordinate submission of new applications to council</li>
+              <li>Confirm new Scout information is correct in Scoutbook.</li>
+              <li>Prepare and maintain a supply welcome meeting folder for new parent meetings</li>
+              <li>Prepare weekly binders for new Scouts</li>
+              <li>Maintain inventory of Class B t-shirts and order replacements as needed.</li>
+              <li>Coordinate order/monogram of spit kits for new scouts.</li>
+              <li>Assist the Treasurer as needed</li>
+          </ul>
+          <div class="role-title">Member(s)</div>
+          <ul>
+              <li>Assist on tasks as assigned by Treasurer</li>
+          </ul>
+      </div>
+      <div class="role-section">
+          <div class="role-title">Advancement Sub-Committee</div>
+          <p>The sub-committee of the Troop Committee, that tracks and reviews processes for Scout advancement through ranks, merit badges, and special awards. Coordinates board of reviews for scouts looking to advance in rank. Plans and carries out the Troop’s Court of Honor Ceremonies, including coordinating refreshments. The Life to Eagle mentoring activity is also part of this sub-committee’s work. The subcommittee is led by the Troop Advancements Chairperson.</p>
+      </div>
+      <div class="role-section subsection">
+          <div class="role-title">Troop Advancement Chair</div>
+          <ul>
+              <li>Responsible for maintaining accurate and complete records for all Scouts and to report all advancement to BSA per reporting guidelines.</li>
+              <li>Schedules boards of review as necessary</li>
+              <li>Prepare all advancement for COH</li>
+              <li>Communicate all advancement to COH Chair for inclusion in COH ceremony handouts.</li>
+              <li>The unit advancement chair is appointed by the committee chairman to ensure that the unit has at least monthly boards of review, quarterly courts of honor, and that the unit</li>
+          </ul>
+          <div class="role-title">Court of Honor Coordinator (COH)</div>
+          <ul>
+              <li>Responsible for organizing (3) COH events each program year.</li>
+              <li>Produce script, assigning Scouts to perform the different speaking rolls, the SPL and ASPL are the Emcee for the COH.</li>
+              <li>Print event certificates for all events</li>
+              <li>Prepare and duplicate program handout for courts of honor.</li>
+              <li>Coordinate the purchase of all awards, certificates and recognitions with the advancement chair.</li>
+              <li>Coordinate a snack calendar for the COH, at the beginning of the year.</li>
+              <li>Assist advancement chair as needed.</li>
+          </ul>
+          <div class="role-title">Life to Eagle Coordinator</div>
+          <ul>
+              <li>Meet on a-as-needed basis with Eagle Scout candidates prior to them initiating their Eagle Scout project. This meeting should serve as an idea gathering/planning session to start the Scout working on his project.</li>
+              <li>Publicize and encourage attendance by all Life Scouts to the district Life-to-Eagle Conference.</li>
+              <li>Review with Eagle Scout candidates their proposal for their project prior to them meeting with the troop committee and the district Eagle Scout board representative.</li>
+              <li>Help Life Scouts plan their merit badge advancement to accomplish that portion of their advancement on time.</li>
+              <li>Work with the committee chair to ensure letters of recognition are requested and the treasurer to insure the application for NESA membership is made.</li>
+              <li>Assist advancement Chair as needed</li>
+          </ul>
+          <div class="role-title">Member(s)</div>
+          <ul>
+              <li>Assist on tasks as assigned by Advancement Chair</li>
+          </ul>
+      </div>
+      <div class="role-section">
+          <div class="role-title">Troop Program/Activities Sub-Committee</div>
+          <p>The sub-committee of the Troop Committee provides support to the Scoutmaster and Assistant Scoutmasters in carrying out the troop’s programs and activities. This includes ensuring members medical forms are up to date and on file, permission slips are collected, community service is carried out, and that equipment is available and in good condition. The sub-committee is led by the Activities Chair.</p>
+      </div>
+      <div class="role-section subsection">
+          <div class="role-title">Activities Chair</div>
+          <ul>
+              <li>Collect and maintain medical forms for all Scouts and adult leaders that are active in Scouting activities.</li>
+              <li>Provide outing leaders with medical forms for those Scouts attending that activity.</li>
+              <li>Organizes and the maintains the troop transportation roster containing a current list of qualified adult drivers, vehicle and insurance information, number of seats with seat belts, phone number. Compile a list of drivers with vehicles that are capable of towing the troop trailer(s)</li>
+              <li>Prepare and print permissions slips for troop campout/activities. Coordinate with the campout Point of Contact and ensure they are signed and returned prior to scouts embarking on any trip.</li>
+              <li>Maintain copies of permission slips for past campouts.</li>
+              <li>Ensure that any additional pre-trip medical screenings or other requirements are met for troop activities.</li>
+          </ul>
+          <div class="role-title">Community Service Coordinator</div>
+          <ul>
+              <li>Responsible for coordinating and scheduling Troop service projects</li>
+              <li>Ushering Roadside cleanup (4 each per year)</li>
+              <li>Honoring our Veterans (2 times per year)</li>
+              <li>Scouting for Food (Once per year)</li>
+              <li>Obtain attendance from Troop Scribe</li>
+              <li>Enter the volunteer hours in the BSA JTE tracking site</li>
+              <li>Communicate the list of Scouts participating and the hours for each to the COH Chair for certificates.</li>
+              <li>Assist Activities chair as needed.</li>
+          </ul>
+          <div class="role-title">Troop Equipment Coordinator</div>
+          <ul>
+              <li>Works with ASM’s and Troop Quartermaster to determine Troop equipment needs.</li>
+              <li>Presents needs to committee for approval and purchases need equipment.</li>
+              <li>Handles annual vehicle registration process for troop owned trailers.</li>
+              <li>Coordinate repair of troop owned equipment as needed.</li>
+              <li>Assist activities chair as needed</li>
+          </ul>
+          <div class="role-title">Troop Training Coordinator</div>
+          <ul>
+              <li>Ensure troop leaders and committee members have opportunities for training.</li>
+              <li>Be responsible for BSA Youth Protection training within the troop.</li>
+              <li>Maintain an up-to-date inventory of the unit's training status and future needs Scouters may need.</li>
+              <li>Work with new leaders to confirm all required training requirements have been completed.</li>
+              <li>Develop and maintain a current list of qualified leaders to serve as merit badge counselors for the troop. Ensure that proper registration paperwork is submitted to the district and council offices.</li>
+              <li>Assist Activities chair as needed</li>
+          </ul>
+          <div class="role-title">Member(s)</div>
+          <ul>
+              <li>Assist on tasks as assigned by Activities Chair</li>
+          </ul>
+      </div>
+    </section>
+
+        <section class="section-block">
+            <h2 id="minutes">Minutes &amp; Documents</h2>
+            <p>Minutes and important documents will be posted here as they become available.</p>
+        </section>
+   <style> .section-block {
+        background: #f7faff;
+        border-radius: 14px;
+        box-shadow: 0 2px 12px rgba(0,47,108,0.07);
+        margin-bottom: 2.5rem;
+        padding: 2.2rem 1.5rem 1.5rem 1.5rem;
+        border: 1.5px solid #e2eafc;
+        transition: box-shadow 0.2s;
+    }
+    .section-block:hover {
+        box-shadow: 0 6px 24px rgba(0,47,108,0.13);
+    }</style>
+    </main>
+</body>
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troop 77 Scoutmaster & ASMs</title>
+    <link rel="icon" type="image/webp" href="BSA_Logo.webp">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+    /* Responsive adjustments for all screens */
+        .back-home-bar {
+            text-align: left;
+            max-width: 1050px;
+            margin: 0 auto 0.5rem auto;
+            padding-left: 1.2rem;
+        }
+        .back-home-btn {
+            display: inline-flex;
+            align-items: center;
+            background: #00509e;
+            color: #fff;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 1.08rem;
+            border-radius: 6px;
+            padding: 0.5em 1.2em 0.5em 1em;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+            margin-top: 0.5rem;
+            transition: background 0.2s, color 0.2s;
+            border: none;
+            cursor: pointer;
+            gap: 0.5em;
+        }
+        .back-home-btn:hover {
+            background: #ffd700;
+            color: #002f6c;
+        }
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background: linear-gradient(135deg, #e2eafc 0%, #b6ccfe 100%);
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat, #002f6c;
+            color: #fff;
+            padding: 2.5rem 0 1.5rem 0;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 2px 12px rgba(0,47,108,0.10);
+        }
+        header::after {
+            content: '';
+            position: absolute;
+            left: 0; right: 0; top: 0; bottom: 0;
+            background: rgba(0,47,108,0.55);
+            z-index: 1;
+        }
+        header > * {
+            position: relative;
+            z-index: 2;
+        }
+        .bsa-logo-header {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 0.5rem;
+            background: #fff;
+            border-radius: 50%;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+            object-fit: contain;
+        }
+        header h1 {
+            font-size: 2.3rem;
+            font-weight: 700;
+            margin: 0.7rem 0 0 0;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+        }
+        .motto {
+            font-size: 1.15rem;
+            color: #003366;
+            text-align: center;
+            margin: 2rem auto 2.5rem auto;
+            font-style: italic;
+            background: #f7faff;
+            border-radius: 12px;
+            max-width: 750px;
+            padding: 1.2rem 1.5rem 1.5rem 1.5rem;
+            box-shadow: 0 4px 18px rgba(0,47,108,0.08);
+        }
+        main {
+            max-width: 1050px;
+            margin: 0 auto 2.5rem auto;
+            background: #fff;
+            padding: 2.5rem 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+        }
+        h2 {
+            color: #00509e;
+            margin-top: 2.2rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #e2eafc;
+            padding-bottom: 0.3rem;
+        }
+        .scoutmaster-section, .asms-section {
+            margin-bottom: 2.5rem;
+        }
+        .scoutmaster-grid {
+            margin-bottom: 2.5rem;
+        }
+        .scoutmaster-grid, .asms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 3.5rem 2.5rem;
+            padding-left: 1.2rem;
+            padding-right: 1.2rem;
+            justify-items: stretch;
+            align-items: start;
+            padding: 0.5rem;
+        }
+
+        
+        .scoutmaster-card, .asm-card {
+            box-sizing: border-box;
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            padding: 1.2rem 1.2rem 1.5rem 1.2rem;
+            width: 100%;
+            min-width: 0;
+            min-height: 340px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        .scoutmaster-card img, .asm-card img {
+            width: 140px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 0.7rem;
+            border: 2px solid #00509e;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+            background: #f7faff;
+        }
+        .scoutmaster-card h3, .asm-card h3 {
+            font-size: 1.1rem;
+            color: #00509e;
+            margin: 0.5rem 0 0.2rem 0;
+        }
+        .scoutmaster-card p, .asm-card p {
+            font-size: 0.97rem;
+            color: #333;
+            margin: 0.2rem 0 0.5rem 0;
+        }
+        .scoutmaster-card .date, .asm-card .date {
+            font-size: 0.9rem;
+            color: #888;
+        }
+        .role-section {
+            margin-bottom: 2.2rem;
+        }
+        @media (max-width: 900px) {
+            .scoutmaster-grid, .asms-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            main {
+                padding: 1.2rem 0.5rem;
+            }
+            header h1 {
+                font-size: 1.5rem;
+            }
+            .motto {
+                font-size: 1rem;
+                padding: 1rem 0.7rem 1.2rem 0.7rem;
+            }
+            .scoutmaster-card, .asm-card {
+                min-width: 160px;
+                max-width: 100%;
+                padding: 1rem 0.5rem 1.2rem 0.5rem;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .scoutmaster-grid, .asms-grid {
+                grid-template-columns: 1fr;
+            }
+            main {
+                padding: 0.5rem 0.2rem;
+            }
+            .bsa-logo-header {
+                width: 48px;
+                height: 48px;
+            }
+            header h1 {
+                font-size: 1.1rem;
+            }
+            .motto {
+                font-size: 0.95rem;
+                padding: 0.7rem 0.3rem 1rem 0.3rem;
+            }
+            .scoutmaster-card, .asm-card {
+                min-width: 120px;
+                max-width: 100%;
+                padding: 0.7rem 0.2rem 1rem 0.2rem;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="back-home-bar">
+            <a href="index.html" class="back-home-btn">
+                <img src="BSA_Logo.webp" alt="BSA Logo" style="height:1.3em;width:1.3em;vertical-align:middle;margin-right:0.5em;border-radius:50%;background:#fff;box-shadow:0 1px 4px rgba(0,0,0,0.10);"> Back to Home
+            </a>
+        </div>
+        <img src="BSA_Logo.webp" alt="BSA Logo" class="bsa-logo-header">
+        <h1>Troop 77 Scoutmaster & ASMs</h1>
+    </header>
+    <main>
+        <h2>Role of the Scoutmaster</h2>
+        <div class="role-section">
+            <p>The Scoutmaster trains boy leaders to run the troop by providing direction, coaching, and support. The Scoutmaster is responsible for training and guiding youth leaders in the operation of the troop, and for managing, training, and supporting his or her assistant Scoutmasters in their role.<br><br>
+            A Scoutmaster is a mentor to the youth leaders. He presents them with ideas and information and provides support. One of the most difficult things a Scoutmaster has to do is to allow the youth to lead, even when he can see failure looming on the horizon. A Scoutmaster might say things like “Have you considered …?” and “What do you thing might happen if …?”, but the youth don’t always take the hint. A rule of thumb is, “If its not illegal, immoral, or dangerous, then let them try it their way.” Failure is a good teacher and most youth will rebound from it with a positive attitude.<br><br>
+            A Scoutmaster has Scoutmaster conferences with troop members. He shows an interest in them and talks to them about what is happening in their lives.</p>
+        </div>
+        <h2>Scoutmasters</h2>
+        <div class="scoutmaster-section">
+            <div class="scoutmaster-grid">
+                <div class="scoutmaster-card">
+                    <img src="SmPhotos/MikeFerraz.jpg" alt="Current ScoutMaster - Mike Ferraz">
+                    <h3>Current ScoutMaster<br>Mike Ferraz</h3>
+                    <p class="date">6/2023-Present</p>
+                </div>
+                <div class="scoutmaster-card">
+                    <img src="SmPhotos/DaveDavisSMPhoto2.jpg" alt="Previous ScoutMaster - Dave Davis">
+                    <h3>Previous ScoutMaster<br>Dave Davis</h3>
+                    <p class="date">9/2021-6/2023</p>
+                </div>
+                <div class="scoutmaster-card">
+                    <img src="SmPhotos/MikeNoelSMPhoto.jpg" alt="Previous ScoutMaster - Mike Noel">
+                    <h3>Previous ScoutMaster<br>Mike Noel</h3>
+                    <p class="date">9/2020-9/2021</p>
+                </div>
+                <div class="scoutmaster-card">
+                    <img src="SmPhotos/DaveDavis.jpg" alt="Previous ScoutMaster - Dave Davis">
+                    <h3>Previous ScoutMaster<br>Dave Davis</h3>
+                    <p class="date">9/2017-9/2020</p>
+                </div>
+                <div class="scoutmaster-card">
+                    <img src="SmPhotos/MikeBellSM.jpg" alt="Previous ScoutMaster - Mike Bell">
+                    <h3>Previous ScoutMaster<br>Mike Bell</h3>
+                    <p class="date">6/2015-6/2017</p>
+                </div>
+                <div class="scoutmaster-card">
+                    <img src="SmPhotos/BrianWashburnSM.jpg" alt="Previous ScoutMaster - Brian Washburn">
+                    <h3>Previous ScoutMaster<br>Brian Washburn</h3>
+                    <p class="date">6/2012-6/2015</p>
+                </div>
+                <div class="scoutmaster-card">
+                    <img src="SmPhotos/GeorgeMartinSM.jpg" alt="Previous ScoutMaster - George Martin">
+                    <h3>Previous ScoutMaster<br>George Martin</h3>
+                    <p class="date">6/2008-6/2012</p>
+                </div>
+                <div class="scoutmaster-card">
+                    <img src="SmPhotos/JohnMotleySM.jpg" alt="Previous ScoutMaster - John Motley">
+                    <h3>Previous ScoutMaster<br>John Motley</h3>
+                    <p class="date">8/2000-6/2008</p>
+                </div>
+            </div>
+        </div>
+        <h2>Assistant Scoutmasters (ASMs)</h2>
+        <div class="asms-section">
+            <div class="asms-grid">
+                <div class="asm-card"><img src="AsmPhots/DaveDavis.jpg" alt="Assistant ScoutMaster - Dave Davis"><h3>Assistant ScoutMaster<br>Dave Davis</h3></div>
+                <div class="asm-card"><img src="AsmPhots/JimCovert.jpg" alt="Assistant ScoutMaster - James Covert"><h3>Assistant ScoutMaster<br>James Covert</h3></div>
+                <div class="asm-card"><img src="AsmPhots/AihabAlhassan2.jpg" alt="Assistant ScoutMaster - Aihab Alhassan"><h3>Assistant ScoutMaster<br>Aihab Alhassan</h3></div>
+                <div class="asm-card"><img src="AsmPhots/ShawnVasey.jpg" alt="Assistant ScoutMaster - Shawn Vasey"><h3>Assistant ScoutMaster<br>Shawn Vasey</h3></div>
+                <div class="asm-card"><img src="AsmPhots/MattClohessy.jpg" alt="Assistant ScoutMaster - Matt Clohessy"><h3>Assistant ScoutMaster<br>Matt Clohessy</h3></div>
+                <div class="asm-card"><img src="AsmPhots/JohnFlores2.jpg" alt="Assistant ScoutMaster - John Flores"><h3>Assistant ScoutMaster<br>John Flores</h3></div>
+                <div class="asm-card"><img src="AsmPhots/GaryBurden2.jpg" alt="Assistant ScoutMaster - Gary Burden"><h3>Assistant ScoutMaster<br>Gary Burden</h3></div>
+                <div class="asm-card"><img src="AsmPhots/TomVanSickle.jpg" alt="Assistant ScoutMaster - Tom VanSickle"><h3>Assistant ScoutMaster<br>Tom VanSickle</h3></div>
+                <div class="asm-card"><img src="AsmPhots/ChristianGerlach.jpg" alt="Assistant ScoutMaster - Christian Gerlach"><h3>Assistant ScoutMaster<br>Christian Gerlach</h3></div>
+                <div class="asm-card"><img src="AsmPhots/RichDoherty.jpg" alt="Assistant ScoutMaster - Rich Doherty"><h3>Assistant ScoutMaster<br>Rich Doherty</h3></div>
+                <div class="asm-card"><img src="AsmPhots/DougHowlett2.jpg" alt="Assistant ScoutMaster - Doug Howlett"><h3>Assistant ScoutMaster<br>Doug Howlett</h3></div>
+                <div class="asm-card"><img src="AsmPhots/PhilAbts.jpg" alt="Assistant ScoutMaster - Phil Abts"><h3>Assistant ScoutMaster<br>Phil Abts</h3></div>
+                <div class="asm-card"><img src="AsmPhots/TyRobinson.jpg" alt="Assistant ScoutMaster - Ty Robinson"><h3>Assistant ScoutMaster<br>Ty Robinson</h3></div>
+                <div class="asm-card"><img src="AsmPhots/JohnJohnson.jpg" alt="Assistant ScoutMaster - John Johnson"><h3>Assistant ScoutMaster<br>John Johnson</h3></div>
+                <div class="asm-card"><img src="AsmPhots/JimHill.jpg" alt="Assistant ScoutMaster - Jim Hill"><h3>Assistant ScoutMaster<br>Jim Hill</h3></div>
+                <div class="asm-card"><img src="AsmPhots/ChrisDunning.jpg" alt="Assistant ScoutMaster - Chris Dunning"><h3>Assistant ScoutMaster<br>Chris Dunning</h3></div>
+                <div class="asm-card"><img src="AsmPhots/BartMcleod.jpg" alt="Assistant ScoutMaster - Bart McLeod"><h3>Assistant ScoutMaster<br>Bart McLeod</h3></div>
+                <div class="asm-card"><img src="AsmPhots/DenysPugliese.jpg" alt="Assistant ScoutMaster - Denys Pugliese"><h3>Assistant ScoutMaster<br>Denys Pugliese</h3></div>
+                <div class="asm-card"><img src="AsmPhots/GeneSnyder.jpg" alt="Assistant ScoutMaster - Gene Snyder"><h3>Assistant ScoutMaster<br>Gene Snyder</h3></div>
+                <div class="asm-card"><img src="AsmPhots/DaveSwartz.jpg" alt="Assistant ScoutMaster - Dave Swartz"><h3>Assistant ScoutMaster<br>Dave Swartz</h3></div>
+                <div class="asm-card"><img src="AsmPhots/JohnTriglia.jpg" alt="Assistant ScoutMaster - John Triglia"><h3>Assistant ScoutMaster<br>John Triglia</h3></div>
+                <div class="asm-card"><img src="AsmPhots/ChrisWilson.jpg" alt="Assistant ScoutMaster - Chris Wilson"><h3>Assistant ScoutMaster<br>Chris Wilson</h3></div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

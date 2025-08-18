@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scout - Troop 77</title>
+    <link rel="icon" type="image/webp" href="BSA_Logo.webp">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      background: linear-gradient(135deg, #e2eafc 0%, #b6ccfe 100%);
+      margin: 0;
+      padding: 0;
+      color: #222;
+    }
+    header {
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat, #002f6c;
+      color: #fff;
+      padding: 2.5rem 0 1.5rem 0;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 2px 12px rgba(0,47,108,0.10);
+    }
+    header::after {
+      content: '';
+      position: absolute;
+      left: 0; right: 0; top: 0; bottom: 0;
+      background: rgba(0,47,108,0.55);
+      z-index: 1;
+    }
+    header > * {
+      position: relative;
+      z-index: 2;
+    }
+    .bsa-logo-header {
+      width: 70px;
+      height: 70px;
+      margin-bottom: 0.5rem;
+      background: #fff;
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+      object-fit: contain;
+    }
+    header h1 {
+      font-size: 2.3rem;
+      font-weight: 700;
+      margin: 0.7rem 0 0 0;
+      letter-spacing: 2px;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      color: #fff !important;
+    }
+    .motto {
+      font-size: 1.15rem;
+      color: #003366;
+      text-align: center;
+      margin: 2rem auto 2.5rem auto;
+      font-style: italic;
+      background: #f7faff;
+      border-radius: 12px;
+      max-width: 750px;
+      padding: 1.2rem 1.5rem 1.5rem 1.5rem;
+      box-shadow: 0 4px 18px rgba(0,47,108,0.08);
+    }
+    main {
+      max-width: 1050px;
+      margin: 0 auto 2.5rem auto;
+      background: #fff;
+      padding: 2.5rem 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+    }
+    h1, h2, h3 {
+      color: #00509e;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      margin-top: 0;
+      font-size: 2.2rem;
+    }
+    section {
+      margin-bottom: 2.5rem;
+    }
+    .basics-list, .values-list, .positions-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .basics-list div, .positions-list div {
+      min-width: 180px;
+      font-weight: 500;
+    }
+    .eagle-list {
+      margin-bottom: 2rem;
+    }
+    .eagle-list li {
+      margin-bottom: 1.2em;
+    }
+    .mb-table, .ranks-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 2rem;
+    }
+    .mb-table th, .mb-table td, .ranks-table th, .ranks-table td {
+      border: 1px solid #e2eafc;
+      padding: 0.5em 0.7em;
+      text-align: left;
+    }
+    .mb-table th, .ranks-table th {
+      background: #f7faff;
+      color: #00509e;
+    }
+    @media (max-width: 700px) {
+      main {
+        padding: 1rem 0.5rem;
+      }
+      .basics-list, .values-list, .positions-list {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      .bsa-logo-header {
+        width: 48px;
+        height: 48px;
+      }
+      header h1 {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="back-home-bar">
+      <a href="index.html" class="back-home-btn">
+        <img src="BSA_Logo.webp" alt="BSA Logo" style="height:1.3em;width:1.3em;vertical-align:middle;margin-right:0.5em;border-radius:50%;background:#fff;box-shadow:0 1px 4px rgba(0,0,0,0.10);"> Back to Home
+      </a>
+    </div>
+    <img src="BSA_Logo.webp" alt="BSA Logo" class="bsa-logo-header">
+    <h1>BSA Troop 77 Scouts</h1>
+    <nav class="scout-nav">
+      <a href="#about">About</a>
+      <a href="#basics">Basics</a>
+      <a href="#scouting-values">Scouting Values</a>
+      <a href="#mb-counselors">MB Counselors </a>
+      <a href="#meritbadges">Merit Badges</a>
+      <a href="#ranks">Ranks</a>
+      <a href="#positions">Positions</a>
+      <a href="#patrol">Patrol Method</a>
+      <a href="#eagles">Eagle Scouts</a>
+      <a href="#documents">Documents</a>
+      
+    </nav>
+  </header>
+  <main>
+    <section class="section-block" id="about">
+      <h2 style="margin-top:0.2em;">About Troop 77</h2>
+      <p>
+        Troop 77 exists to train young men in becoming exemplary leaders by instilling within them the virtues outlined in the Scout Oath, the Scout Law, the Scout Motto, the Scout Slogan, and the Outdoor Code as outlined in the Boy Scout Handbook and the materials left to BSA by Lord Baden-Powell.
+      </p>
+      <p>
+        Troop 77 remains loyal to the spirit of Scouting as it implements the Troop Program Plan. Accordingly, Troop 77 requires personal growth in its Scouts on a physical, mental, and moral level. Troop 77 expects its young men will internalize this code of ethics, which does not seek to supersede, but to support, what the Scout learns at home and in his place of worship.
+      </p>
+    </section>
+    <section class="section-block" id="basics">
+      <h2 style="margin-top:0.2em;">The Basics</h2>
+      <div class="basics-list">
+  <button class="basics-item" id="scout-oath-btn" type="button" style="cursor:pointer;text-decoration:underline;background:#00509e;color:#fff;border:none;padding:0.5em 1.2em;border-radius:6px;font-size:1rem;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,0.07);transition:background 0.2s, color 0.2s;">Scout Oath</button>
+  <button class="basics-item" id="scout-law-btn" type="button" style="cursor:pointer;text-decoration:underline;background:#00509e;color:#fff;border:none;padding:0.5em 1.2em;border-radius:6px;font-size:1rem;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,0.07);transition:background 0.2s, color 0.2s;">Scout Law</button>
+  <button class="basics-item" id="scout-salute-btn" type="button" style="cursor:pointer;text-decoration:underline;background:#00509e;color:#fff;border:none;padding:0.5em 1.2em;border-radius:6px;font-size:1rem;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,0.07);transition:background 0.2s, color 0.2s;">Scout Salute</button>
+  <button class="basics-item" id="scout-motto-btn" type="button" style="cursor:pointer;text-decoration:underline;background:#00509e;color:#fff;border:none;padding:0.5em 1.2em;border-radius:6px;font-size:1rem;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,0.07);transition:background 0.2s, color 0.2s;">Scout Motto</button>
+  <button class="basics-item" id="scout-slogan-btn" type="button" style="cursor:pointer;text-decoration:underline;background:#00509e;color:#fff;border:none;padding:0.5em 1.2em;border-radius:6px;font-size:1rem;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,0.07);transition:background 0.2s, color 0.2s;">Scout Slogan</button>
+  <button class="basics-item" id="scout-handshake-btn" type="button" style="cursor:pointer;text-decoration:underline;background:#00509e;color:#fff;border:none;padding:0.5em 1.2em;border-radius:6px;font-size:1rem;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,0.07);transition:background 0.2s, color 0.2s;">Scout Handshake</button>
+  <button class="basics-item" id="scout-sign-btn" type="button" style="cursor:pointer;text-decoration:underline;background:#00509e;color:#fff;border:none;padding:0.5em 1.2em;border-radius:6px;font-size:1rem;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,0.07);transition:background 0.2s, color 0.2s;">Scout Sign</button>
+  <button class="basics-item" id="scout-emblem-btn" type="button" style="cursor:pointer;text-decoration:underline;background:#00509e;color:#fff;border:none;padding:0.5em 1.2em;border-radius:6px;font-size:1rem;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,0.07);transition:background 0.2s, color 0.2s;">Scout Emblem</button>
+  <button class="basics-item" id="scout-uniform-btn" type="button" style="cursor:pointer;text-decoration:underline;background:#00509e;color:#fff;border:none;padding:0.5em 1.2em;border-radius:6px;font-size:1rem;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,0.07);transition:background 0.2s, color 0.2s;">Scout Uniform</button>
+  <button class="basics-item" id="outdoor-code-btn" type="button" style="cursor:pointer;text-decoration:underline;background:#00509e;color:#fff;border:none;padding:0.5em 1.2em;border-radius:6px;font-size:1rem;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,0.07);transition:background 0.2s, color 0.2s;">Outdoor Code</button>
+      <!-- Modal for Scout Slogan -->
+      <dialog id="scout-slogan-modal">
+        <h2 style="margin-top:0;color:#00509e;font-size:1.2rem;">Scout Slogan</h2>
+        <div style="background:#f7faff;padding:1em 1.2em;border-radius:8px;margin-bottom:1.2em;line-height:1.6;font-size:1.08em;box-shadow:0 2px 8px rgba(0,47,108,0.07);">
+          <b>Do a Good Turn Daily</b>
+        </div>
+        <button id="close-scout-slogan" style="margin-top:1.2em;background:#00509e;color:#fff;border:none;padding:0.6em 1.5em;border-radius:6px;font-size:1rem;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,0.07);cursor:pointer;">Close</button>
+      </dialog>
+
+      <!-- Modal for Scout Handshake -->
+      <dialog id="scout-handshake-modal">
+        <h2 style="margin-top:0;color:#00509e;font-size:1.2rem;">Scout Handshake</h2>
+        <div style="background:#f7faff;padding:1em 1.2em;border-radius:8px;margin-bottom:1.2em;line-height:1.6;font-size:1.08em;box-shadow:0 2px 8px rgba(0,47,108,0.07);">
+          <ul style="margin-left:1.2em;">
+            <li>Extend your left hand to another Scout. This is the primary distinction, as standard handshakes are typically done with the right hand.</li>
+            <li>Firmly grasp their left hand. It's a regular handshake, but with the left hand.</li>
+            <li>No interlocking of fingers is required. While some variations might exist between national scouting organizations or programs, the common practice doesn't involve interlocking fingers.</li>
+            <li>It is primarily used when both individuals are in uniform. While not a strict rule, using the left handshake with non-Scouts could be awkward or misinterpreted, so it is generally reserved for fellow Scouts.</li>
+          </ul>
+          <b>Significance of the left-handed handshake</b>
+          <ul style="margin-left:1.2em;">
+            <li><b>Friendship:</b> The left hand is closer to the heart, symbolizing a greeting of friendship and brotherhood among Scouts worldwide.</li>
+            <li><b>Courage and Trust:</b> The tradition is said to have originated from an encounter Lord Baden-Powell, the founder of Scouting, had with Ashanti warriors in West Africa. They offered their left hand as a sign of bravery, signifying that they were dropping their shields and protection to greet him.</li>
+          </ul>
+        </div>
+        <button id="close-scout-handshake" style="margin-top:1.2em;background:#00509e;color:#fff;border:none;padding:0.6em 1.5em;border-radius:6px;font-size:1rem;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,0.07);cursor:pointer;">Close</button>
+      </dialog>
+
+      <!-- Modal for Scout Uniform -->
+      <dialog id="scout-uniform-modal">
+        <h2 style="margin-top:0;color:#00509e;font-size:1.2rem;">Scout Uniform</h2>
+        <div style="background:#f7faff;padding:1em 1.2em;border-radius:8px;margin-bottom:1.2em;line-height:1.6;font-size:1.08em;box-shadow:0 2px 8px rgba(0,47,108,0.07);max-height:50vh;overflow-y:auto;">
+          <b>The BSA uniform serves several important purposes within the scouting program:</b>
+          <ul style="margin-left:1.2em;">
+            <li><b>Identity:</b> It identifies members as Scouts and fosters a sense of belonging to the Scouting movement.</li>
+            <li><b>Achievement:</b> It provides a place for Scouts to proudly display their earned badges and awards.</li>
+            <li><b>Community:</b> It makes Scouts visible in the community and allows them to be recognized as positive role models.</li>
+            <li><b>Unity and Commitment:</b> Wearing the uniform signifies a Scout's commitment to the aims and purposes of Scouting, according to Weebly.com.</li>
+          </ul>
+          <b>Types of uniforms</b>
+          <ul style="margin-left:1.2em;">
+            <li><b>Field Uniform (Class A):</b> This is the official BSA uniform, consisting of the tan button-down shirt, green pants/shorts, neckerchief, belt, and socks, along with various insignia (patches). It's worn for formal occasions, meetings, and events.</li>
+            <li><b>Activity Uniform (Class B):</b> This is a more relaxed option, typically a Scouting-related t-shirt or polo shirt, often customized with a unit design, paired with the uniform pants/shorts. It's used for activities where the full field uniform isn't necessary or ideal.</li>
+          </ul>
+          <b>Components of the Scouts BSA field uniform (Class A)</b>
+          <ul style="margin-left:1.2em;">
+            <li><b>Shirt:</b> The official tan, long or short-sleeved shirt made of a durable fabric blend, with two front pockets and button flaps, epaulets, and the BSA emblem on the left pocket. It may also have a vented back yoke for breathability.</li>
+            <li><b>Pants/Shorts:</b> Official olive green pants, shorts, skorts, or convertible switchback pants made of a durable fabric blend. Female Scouts have additional options like skorts or roll-up pants.</li>
+            <li><b>Belt:</b> Official green web belt with a metal buckle featuring the Scouts BSA emblem, according to ScoutShop.org.</li>
+            <li><b>Socks:</b> Official olive green socks, available in ankle, crew, or knee lengths.</li>
+            <li><b>Headgear:</b> Optional, but if worn, must be an official Scouting America adult hat, according to ScoutShop.org. Troops may also choose to wear a specific troop hat.</li>
+            <li><b>Neckerchief and Slide:</b> Troop-specific neckerchief and slide are required. Award neckerchiefs can also be worn.</li>
+            <li><b>Insignia:</b> Includes the Council Shoulder Patch (CSP), World Crest Emblem, Unit Numerals, Rank Emblem, Merit Badge Sash (for special events), Order of the Arrow sash (if applicable), and various awards.</li>
+          </ul>
+          <b>Uniform variations for other programs</b>
+          <ul style="margin-left:1.2em;">
+            <li><b>Cub Scouts:</b> Cub Scouts wear a blue uniform, but specific details vary by rank. Lions wear a t-shirt, while other Cub Scout ranks wear a button-down shirt with rank-specific neckerchiefs, caps, and slides.</li>
+            <li><b>Webelos and Arrow of Light:</b> They have the option of wearing the blue Cub Scout uniform or the tan and olive uniform, which is similar to the Scouts BSA uniform.</li>
+            <li><b>Venturing:</b> Venturers wear a green field uniform with gray pants/shorts, or a more casual activity uniform with a Scouting t-shirt or polo.</li>
+            <li><b>Sea Scouting:</b> Sea Scouts have a distinct uniform, typically navy blue with specific components like a navy blue ball cap, shirt, and pants.</li>
+          </ul>
+          <b>Important considerations</b>
+          <ul style="margin-left:1.2em;">
+            <li><b>Insignia placement:</b> Specific guidelines exist for where to place patches and insignia on the uniform.</li>
+            <li><b>Uniform etiquette:</b> Uniforms should be clean, neat, and in good condition. Shirt tails should be tucked in, though unit discretion on this policy was implemented on January 1, 2023.</li>
+            <li><b>Troop policies:</b> Troops may have specific policies regarding uniform components like headgear, neckwear, and belts.</li>
+            <li><b>Safety:</b> When participating in outdoor activities, footwear should be appropriate for the activity, and open-toed shoes are generally not allowed. Sun protection like hats is recommended.</li>
+          </ul>
+        </div>
+        <button id="close-scout-uniform" style="margin-top:1.2em;background:#00509e;color:#fff;border:none;padding:0.6em 1.5em;border-radius:6px;font-size:1rem;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,0.07);cursor:pointer;">Close</button>
+      </dialog>
+      </div>
+      <!-- Modal for Scout Oath -->
+      <dialog id="scout-oath-modal">
+        <h2 style="margin-top:0;color:#00509e;font-size:1.3rem;">The Scout Oath</h2>
+        <div style="background:#f7faff;padding:1em 1.2em;border-radius:8px;margin-bottom:1.2em;line-height:1.6;font-size:1.08em;box-shadow:0 2px 8px rgba(0,47,108,0.07);">
+          <b>On my honor<br>
+          I will do my best<br>
+          To do my duty to God<br>
+          and my country<br>
+          and to obey the Scout Law;<br>
+          To help other people at all times;<br>
+          To keep myself physically strong,<br>
+          mentally awake,<br>
+          and morally straight.</b>
+        </div>
+        <div style="max-height:45vh;overflow-y:auto;padding-right:0.5em;">
+          <section style="margin-bottom:1.2em;">
+            <hr>
+            <h4 style="margin:0 0 0.3em 0;color:#00509e;">On my honor . . .</h4>
+            <p style="margin:0 0 0.7em 0;">By giving your word, you are promising to be guided by the ideals of the Scout Oath.</p>
+          </section>
+          <section style="margin-bottom:1.2em;">
+            <hr>
+            <h4 style="margin:0 0 0.3em 0;color:#00509e;">. . . I will do my best . . .</h4>
+            <p style="margin:0 0 0.7em 0;">Try hard to live up to the points of the Scout Oath. Measure your achievements against your own high standards and don't be influenced by peer pressure or what other people do.</p>
+          </section>
+          <section style="margin-bottom:1.2em;">
+            <hr>
+            <h4 style="margin:0 0 0.3em 0;color:#00509e;">. . . To do my duty to God . . .</h4>
+            <p style="margin:0 0 0.7em 0;">Your family and religious leaders teach you about God and the ways you can serve. You do your duty to God by following the wisdom of those teachings every day and by respecting and defending the rights of others to practice their own beliefs.</p>
+          </section>
+          <section style="margin-bottom:1.2em;">
+            <hr>
+            <h4 style="margin:0 0 0.3em 0;color:#00509e;">. . . and my country . . .</h4>
+            <p style="margin:0 0 0.7em 0;">Help keep the United States a strong and fair nation by learning about our system of government and your responsibilities as a citizen and future voter.</p>
+            <p style="margin:0 0 0.7em 0;">America is made up of countless families and communities. When you work to improve your community and your home, you are serving your country. Natural resources are another important part of America's heritage worthy of your efforts to understand, protect, and use wisely. What you do can make a real difference.</p>
+          </section>
+          <section style="margin-bottom:1.2em;">
+            <hr>
+            <h4 style="margin:0 0 0.3em 0;color:#00509e;">. . . and to obey the Scout Law; . . .</h4>
+            <p style="margin:0 0 0.7em 0;">The twelve points of the Scout Law are guidelines that can lead you toward wise choices. When you obey the Scout Law, other people will respect you for the way you live, and you will respect yourself.</p>
+          </section>
+          <section style="margin-bottom:1.2em;">
+            <hr>
+            <h4 style="margin:0 0 0.3em 0;color:#00509e;">. . . To help other people at all times; . . .</h4>
+            <p style="margin:0 0 0.7em 0;">There are many people who need you. Your cheerful smile and helping hand will ease the burden of many who need assistance. By helping out whenever possible, you are doing your part to make this a better world.</p>
+          </section>
+          <section style="margin-bottom:1.2em;">
+            <hr>
+            <h4 style="margin:0 0 0.3em 0;color:#00509e;">. . . To keep myself physically strong, . . .</h4>
+            <p style="margin:0 0 0.7em 0;">Take care of your body so that it will serve you well for an entire lifetime. That means eating nutritious foods, getting enough sleep, and exercising regularly to build strength and endurance. It also means avoiding harmful drugs, alcohol, tobacco, and anything else that can harm your health.</p>
+          </section>
+          <section style="margin-bottom:1.2em;">
+            <hr>
+            <h4 style="margin:0 0 0.3em 0;color:#00509e;">. . . mentally awake, . . .</h4>
+            <p style="margin:0 0 0.7em 0;">Develop your mind both in the classroom and outside of school. Be curious about everything around you, and work hard to make the most of your abilities. With an inquiring attitude and the willingness to ask questions, you can learn much about the exciting world around you and your role in it.</p>
+          </section>
+          <section style="margin-bottom:1.2em;">
+            <hr>
+            <h4 style="margin:0 0 0.3em 0;color:#00509e;">. . . and morally straight.</h4>
+            <p style="margin:0 0 0.7em 0;">To be a person of strong character, your relationships with others should be honest and open. You should respect and defend the rights of all people. Be clean in your speech and actions, and remain faithful in your religious beliefs. The values you practice as a Scout will help you shape a life of virtue and self-reliance.</p>
+          </section>
+        </div>
+        <button id="close-scout-oath" style="margin-top:1.2em;background:#00509e;color:#fff;border:none;padding:0.6em 1.5em;border-radius:6px;font-size:1rem;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,0.07);cursor:pointer;">Close</button>
+      </dialog>
+      <!-- Modal for Scout Law -->
+      <dialog id="scout-law-modal">
+        <h2 style="margin-top:0;color:#00509e;font-size:1.3rem;">The Scout Law</h2>
+        <div style="max-height:60vh;overflow-y:auto;padding-right:0.5em;">
+          <section style="margin-bottom:1.2em;">
+            <b>A Scout is Trustworthy</b>
+            <p>A Scout tells the truth. He keeps his promises. Honesty is part of his code of conduct. People can depend on him.</p>
+          </section>
+          <section style="margin-bottom:1.2em;">
+            <b>A Scout is Loyal</b>
+            <p>A Scout is true to his family, Scout leaders, friends, school, and nation.</p>
+          </section>
+          <section style="margin-bottom:1.2em;">
+            <b>A Scout is Helpful</b>
+            <p>A Scout is concerned about other people. He does things willingly for others without pay or reward.</p>
+          </section>
+          <section style="margin-bottom:1.2em;">
+            <b>A Scout is Friendly</b>
+            <p>A Scout is a friend to all. He is a brother to other Scouts. He seeks to understand others. He respects those with ideas and customs other than his own.</p>
+          </section>
+          <section style="margin-bottom:1.2em;">
+            <b>A Scout is Courteous</b>
+            <p>A Scout is polite to everyone regardless of age or position. He knows good manners make it easier for people to get along together.</p>
+          </section>
+          <section style="margin-bottom:1.2em;">
+            <b>A Scout is Kind</b>
+            <p>A Scout understands there is strength in being gentle. He treats others as he wants to be treated. He does not hurt or kill harmless things without reason.</p>
+          </section>
+          <section style="margin-bottom:1.2em;">
+            <b>A Scout is Obedient</b>
+            <p>A Scout follows the rules of his family, school, and troop. He obeys the laws of his community and country. If he thinks these rules and laws are unfair, he tries to have them changed in an orderly manner rather than disobey them.</p>
+          </section>
+          <section style="margin-bottom:1.2em;">
+            <b>A Scout is Cheerful</b>
+            <p>A Scout looks for the bright side of things. He cheerfully does tasks that come his way. He tries to make others happy.</p>
+          </section>
+          <section style="margin-bottom:1.2em;">
+            <b>A Scout is Thrifty</b>
+            <p>A Scout works to pay his way and to help others. He saves for unforeseen needs. He protects and conserves natural resources. He carefully uses time and property.</p>
+          </section>
+          <section style="margin-bottom:1.2em;">
+            <b>A Scout is Brave</b>
+            <p>A Scout can face danger even if he is afraid. He has the courage to stand for what he thinks is right even if others laugh at or threaten him.</p>
+          </section>
+          <section style="margin-bottom:1.2em;">
+            <b>A Scout is Clean</b>
+            <p>A Scout keeps his body and mind fit and clean. He goes around with those who believe in living by these same ideals. He helps keep his home and community clean.</p>
+          </section>
+          <section style="margin-bottom:1.2em;">
+            <b>A Scout is Reverent</b>
+            <p>A Scout is reverent toward God. He is faithful in his religious duties. He respects the beliefs of others.</p>
+          </section>
+        </div>
+        <button id="close-scout-law" style="margin-top:1.2em;background:#00509e;color:#fff;border:none;padding:0.6em 1.5em;border-radius:6px;font-size:1rem;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,0.07);cursor:pointer;">Close</button>
+      </dialog>
+      <!-- Modal for Scout Salute -->
+      <dialog id="scout-salute-modal">
+        <h2 style="margin-top:0;color:#00509e;font-size:1.3rem;">The Scout Salute</h2>
+        <div style="max-height:60vh;overflow-y:auto;padding-right:0.5em;">
+          <p>Boy Scouts use the three finger sign and salute. The Scout Sign is performed with the upper arm parallel to the ground and the forearm vertical, forming a right angle at the elbow.</p>
+          <p>The Scout Sign is used when reciting any of the ideals of the BSA such as the Scout Oath and Scout Law.</p>
+          <p>It is also used to gain the attention of the group.</p>
+        </div>
+        <button id="close-scout-salute" style="margin-top:1.2em;background:#00509e;color:#fff;border:none;padding:0.6em 1.5em;border-radius:6px;font-size:1rem;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,0.07);cursor:pointer;">Close</button>
+      </dialog>
+      <!-- Modal for Scout Motto -->
+      <dialog id="scout-motto-modal">
+        <h2 style="margin-top:0;color:#00509e;font-size:1.3rem;">The Scout Motto</h2>
+        <div style="max-height:60vh;overflow-y:auto;padding-right:0.5em;">
+          <p><b>"Be Prepared !"</b></p>
+          <p>In various languages, it has been used by millions of Scouts around the world since 1907.</p>
+          <p>Of course, it is no coincidence that this motto can be shortened to B. P. and Robert Baden-Powell, the founder of the movement, used to shorten his surname into B.-P.</p>
+          <p>In the third part of Scouting for Boys dated February 12, 1908, Robert Baden-Powell explains the meaning of the phrase:</p>
+          <p>The Scout Motto is: BE PREPARED which means you are always in a state of readiness in mind and body to do your DUTY.</p>
+          <ul>
+            <li><b>Be Prepared in Mind</b> by having disciplined yourself to be obedient to every order, and also by having thought out beforehand any accident or situation that might occur, so that you know the right thing to do at the right moment, and are willing to do it.</li>
+            <li><b>Be Prepared in Body</b> by making yourself strong and active and able to do the right thing at the right moment, and do it.</li>
+          </ul>
+        </div>
+        <button id="close-scout-motto" style="margin-top:1.2em;background:#00509e;color:#fff;border:none;padding:0.6em 1.5em;border-radius:6px;font-size:1rem;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,0.07);cursor:pointer;">Close</button>
+      </dialog>
+      <!-- Modal for Scout Sign -->
+      <dialog id="scout-sign-modal">
+        <h2 style="margin-top:0;color:#00509e;font-size:1.3rem;">The Scout Sign</h2>
+        <div style="max-height:60vh;overflow-y:auto;padding-right:0.5em;">
+          <img src="photos/scout-sign1.jpg" alt="Scout Sign Example" style="display:block;margin:0 auto 1em auto;max-width:220px;width:100%;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.10);">
+          <img src="photos/scout-salute1.jpg" alt="Scout Salute Example" style="display:block;margin:0 auto 1em auto;max-width:220px;width:100%;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.10);">
+          <p>The hand orientation is used for the sign, and salute. It stands for the three parts of the scout oath:</p>
+          <ul>
+            <li>Duty to God</li>
+            <li>Duty to Others</li>
+            <li>Duty to Yourself</li>
+          </ul>
+          <p>You make the scout sign by putting your three middle fingers up and covering the nail of your pinky of your right hand. Put it at a right angle holding the 3 fingers straight up.</p>
+          <p>For the scout salute you put the scout sign on the brim of your hat or tip of your right eyebrow.</p>
+        </div>
+        <button id="close-scout-sign" style="margin-top:1.2em;background:#00509e;color:#fff;border:none;padding:0.6em 1.5em;border-radius:6px;font-size:1rem;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,0.07);cursor:pointer;">Close</button>
+      </dialog>
+      <!-- Modal for Scout Emblem -->
+      <dialog id="scout-emblem-modal">
+        <h2 style="margin-top:0;color:#00509e;font-size:1.3rem;">The Scout Emblem</h2>
+        <div style="max-height:60vh;overflow-y:auto;padding-right:0.5em;">
+          <img src="photos/scoutemblem.gif" alt="Scout Emblem" style="display:block;margin:0 auto 1em auto;max-width:180px;width:100%;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.10);">
+          <ol>
+            <li>The three points of the trefoil stand for the three parts of the Scout Oath.</li>
+            <li>The shape of the Scout badge means that a Scout can point the right way in life as truly as does a compass in the field.</li>
+            <li>There are two stars on the badge. They symbolize truth and knowledge.</li>
+            <li>The eagle and shield stand for freedom and a Scout's readiness to defend that freedom.</li>
+            <li>The scroll bearing the Scout motto is turned up at the ends as a reminder that a Scout smiles as he does his duty.</li>
+            <li>The knot at the bottom of the scroll serves as a reminder of the Scout slogan, Do a Good Turn Daily.</li>
+          </ol>
+          <h4>Origin of the World Scouting Symbol<br><span style="font-weight:normal;">"Fleur-de-Lis"</span></h4>
+          <p>In Scouting's early years, critics accused Baden-Powell of trying to turn boys into soldiers, holding up as evidence the Scout symbol, which they called "a spear-head, the emblem of battle and bloodshed". The Founder quickly replied, The crest is the "Fleur-de-Lis", a lily, the emblem of peace and purity.</p>
+          <p>In truth, he had chosen as Scouting's emblem the sign for the North Point, universally shown on maps, charts and compass cards, because "it points in the right direction (and upwards), turning neither to the right nor left, since these lead backward again..." Lady Baden-Powell added later, "It shows the true way to go."</p>
+          <p>Baden-Powell explained the origins of this sign. In the Middle Ages, mariner Flavio Gioja designed it to make the seaman's compass more reliable. In Italian, North was "Tramontana". Gioja used a capital "T" to mark it, and in deference to King Charles of Naples, whose crest was the Fleur-de-Lis, combined the letter with that emblem.</p>
+          <p>To explain the meaning of the Scout emblem, Baden-Powell said, "The two stars on the two side arms stand for the two eyes of the Wolf Cub having been opened before he became a Scout... The three points of the Fleur-de-Lis remind the Scout of the three points of the Scout's Promise..."</p>
+          <p>In the World Scout emblem, the Fleur-de-Lis is surrounded by a circle of rope tied with a reef knot to symbolize the strength and unity of the world brotherhood of Scouting: "Even as one cannot undo a reef knot, no matter how hard one pulls on it, so as it expands, the movement remains united."</p>
+          <p>The three tips of the Fleur-de-Lis represent the three main parts of the Scout promise: duty to God, obedience to the Scout Law, and service to others. The two five-point stars stand for truth and knowledge, and the 10 points on the stars remind us of the 10 points of the Scout law. The ring holding the emblem together represents the bond of brotherhood.</p>
+        </div>
+        <button id="close-scout-emblem" style="margin-top:1.2em;background:#00509e;color:#fff;border:none;padding:0.6em 1.5em;border-radius:6px;font-size:1rem;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,0.07);cursor:pointer;">Close</button>
+      </dialog>
+      <!-- Modal for Outdoor Code -->
+      <dialog id="outdoor-code-modal">
+        <h2 style="margin-top:0;color:#00509e;font-size:1.3rem;">The Outdoor Code</h2>
+        <div style="max-height:60vh;overflow-y:auto;padding-right:0.5em;">
+          <p>As an American, I will do my best to -</p>
+          <ul>
+            <li>Be clean in my outdoor manners.</li>
+            <li>Be careful with fire.</li>
+            <li>Be considerate in the outdoors.</li>
+            <li>Be conservation minded.</li>
+          </ul>
+        </div>
+        <button id="close-outdoor-code" style="margin-top:1.2em;background:#00509e;color:#fff;border:none;padding:0.6em 1.5em;border-radius:6px;font-size:1rem;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,0.07);cursor:pointer;">Close</button>
+      </dialog>
+
+    </section>
+
+    <section class="section-block" id="scouting-values">
+      <h2 style="margin-top:0.2em;">Scouting Values</h2>
+      <p style="font-size:1.1em;max-width:700px;">Research shows, "83 percent of men who were Scouts agree that the values they learned in Scouting continue to be very important to them today" – helping improve their relationships, their work and family lives, and the values by which they live. <span style="font-size:0.95em;color:#555;">(Harris Interactive, 2005, p.5)</span> A Scout Is...</p>
+      <div class="values-list" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2em 2em;margin-top:1.5em;">
+        <div><b style="color:#00509e;">TRUSTWORTHY</b><br>
+          A Scout tells the truth. He keeps his promises. Honesty is part of his code of conduct. People can depend on him.<br>
+          <span style="font-size:0.97em;color:#444;">The majority of Scouts agreed that Scouting has taught them always to be honest (75%) and to be a leader (76%).</span>
+        </div>
+        <div><b style="color:#00509e;">LOYAL</b><br>
+          A Scout is true to his family, Scout leaders, friends, school, and nation.<br>
+          <span style="font-size:0.97em;color:#444;">Eighty-eight percent of Scouts are proud to live in the USA and 83 percent say spending time with family is important to them.</span>
+        </div>
+        <div><b style="color:#00509e;">HELPFUL</b><br>
+          A Scout is concerned about other people. He does things willingly for others without pay or reward.<br>
+          <span style="font-size:0.97em;color:#444;">Eight out of 10 Scouts surveyed believed that helping others should come before their own self-interest.</span>
+        </div>
+        <div><b style="color:#00509e;">FRIENDLY</b><br>
+          A Scout is a friend to all. He is a brother to other Scouts. He seeks to understand others. He respects those with ideas and customs other than his own.<br>
+          <span style="font-size:0.97em;color:#444;">Eighty percent of Scouts say that Scouting has taught them to treat others with respect and (78%) to get along with others.</span>
+        </div>
+        <div><b style="color:#00509e;">COURTEOUS</b><br>
+          A Scout is polite to everyone regardless of age or position. He knows good manners make it easier for people to get along together.<br>
+          <span style="font-size:0.97em;color:#444;">Almost nine of 10 Scouts (87%) believe older people should be treated with respect.</span>
+        </div>
+        <div><b style="color:#00509e;">KIND</b><br>
+          A Scout understands there is strength in being gentle. He treats others as he wants to be treated. He does not hurt or kill harmless things without reason.<br>
+          <span style="font-size:0.97em;color:#444;">Most Scouts agree (78%) Scouting has taught them to care of other people, while 43 percent say their skills in helping other people in need are "excellent."</span>
+        </div>
+        <div><b style="color:#00509e;">OBEDIENT</b><br>
+          A Scout follows the rules of his family, school, and troop. He obeys the laws of his community and country. If he thinks these rules and laws are unfair, he tries to have them changed in an orderly manner rather than disobey them.<br>
+          <span style="font-size:0.97em;color:#444;">Boys in Scouting five years or more are more likely than boys who have never been in Scouts to reject peer pressure to hang out with youth they know commit delinquent acts.</span>
+        </div>
+        <div><b style="color:#00509e;">CHEERFUL</b><br>
+          A Scout looks for the bright side of things. He cheerfully does tasks that come his way. He tries to make others happy.<br>
+          <span style="font-size:0.97em;color:#444;">Overall, Scouts are happy with their schools (78%) and their neighborhoods (79%). In addition, since Scouting builds high ideals in youth, Scouts are less satisfied than non-scouts with the state of the world today.</span>
+        </div>
+        <div><b style="color:#00509e;">THRIFTY</b><br>
+          A Scout works to pay his way and to help others. He saves for unforeseen needs. He protects and conserves natural resources. He carefully uses time and property.<br>
+          <span style="font-size:0.97em;color:#444;">More than eight out of 10 Scouts (82%) say that saving money for the future is a priority.</span>
+        </div>
+        <div><b style="color:#00509e;">BRAVE</b><br>
+          A Scout can face danger even if he is afraid. He has the courage to stand for what he thinks is right even if others laugh at or threaten him.<br>
+          <span style="font-size:0.97em;color:#444;">Eighty percent of Scouts say Scouting has taught them to have confidence in themselves, and 51 percent rate their self-confidence as "excellent."</span>
+        </div>
+        <div><b style="color:#00509e;">CLEAN</b><br>
+          A Scout keeps his body and mind fit and clean. He goes around with those who believe in living by these same ideals. He helps keep his home and community clean.<br>
+          <span style="font-size:0.97em;color:#444;">Nearly eighty percent of Scouts (79%) agree that Scouting has taught them to take better care of the environment and that Scouting has increased their interest in physical fitness.</span>
+        </div>
+        <div><b style="color:#00509e;">REVERENT</b><br>
+          A Scout is reverent toward God. He is faithful in his religious duties. He respects the beliefs of others.<br>
+          <span style="font-size:0.97em;color:#444;">Scouting experience also influences religious service attendance. Eighty-three percent of men who were Scouts five or more years say attending religious services together as a family is "very important," versus 77% of men who had never been Scouts.</span>
+        </div>
+      </div>
+    </section>
+    
+  <style>
+    .eagle-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2em;
+    }
+    .eagle-card {
+      background: #f7faff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,47,108,0.07);
+      padding: 1.1em 1.5em 1.1em 1.5em;
+      border: 1.5px solid #e2eafc;
+      font-size: 1.08em;
+      color: #003366;
+    }
+    .eagle-card b {
+      color: #00509e;
+      font-size: 1.08em;
+    }
+    .eagle-date {
+      color: #666;
+      font-size: 0.98em;
+      margin-left: 0.5em;
+    }
+    .eagle-project {
+      display: block;
+      margin-top: 0.3em;
+      color: #222;
+      font-size: 0.99em;
+    }
+  </style>
+      </div>
+    </section>
+
+    <!-- Merit Badge Counselors Section -->
+    <section class="section-block" id="mb-counselors">
+      <h2 style="margin-top:0.2em;">Merit Badge Counselors</h2>
+      <p style="font-size:1.08em;max-width:700px;">Find a list of current Merit Badge Counselors for Troop 77. This list is maintained as a Google Sheet and includes contact information and the badges each counselor can assist with. Scouts should always follow two-deep leadership and copy a parent or leader when contacting a counselor.</p>
+      <p>
+        <a href="https://docs.google.com/spreadsheets/d/1QwErTyUiOP_EXAMPLE_ID" target="_blank" style="display:inline-block;background:#00509e;color:#fff;font-weight:700;padding:0.7em 1.5em;border-radius:7px;text-decoration:none;box-shadow:0 2px 6px rgba(0,0,0,0.07);font-size:1.08em;transition:background 0.2s, color 0.2s;">View Merit Badge Counselors (Google Sheet)</a>
+      </p>
+    </section>
+
+    <section class="section-block" id="meritbadges">
+      <h2 style="margin-top:0.2em;">Merit Badges</h2>
+      <table class="mb-table">
+        <tr>
+          <th>Merit Badge</th>
+          
+          <th>MeritBadge.Org Workbooks</th>
+          <th>BSA Booklet</th>
+        </tr>
+  <tr> <td>American Business</td><td><a href="http://usscouts.org/mb/worksheets/American-Business.pdf">PDF</a> <a href="http://usscouts.org/mb/worksheets/American-Business.docx">DOCX</a></td><td><a href="http://www.scouting.org/filestore/Merit_Badge_ReqandRes/American_Business.pdf">PDF</a></td></tr>
+  <tr><td>American Cultures</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>American Heritage</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>American Labor</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Animal Science</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Animation</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Archaeology</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Archery</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Architecture</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Art</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Astronomy</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Athletics</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Automotive Maintenance</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Aviation</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Backpacking</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Basketry</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Bird Study</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Bugling</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Camping</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Canoeing</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Chemistry</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Chess</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Citizenship in the Comm</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Citizenship in the Nation</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Citizenship in the World</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Climbing</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Coin Collecting</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Collections</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Communication</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Composite Materials</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Cooking</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Crime Prevention</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Cycling</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Dentistry</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Digital Technology</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Disabilities Awareness</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Dog Care</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Drafting</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Electricity</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Electronics</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Emergency Preparedness</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Energy</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Engineering</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Entrepreneurship</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Environmental Science</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Family Life</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Farm Mechanics</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Fingerprinting</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Fire Safety</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>First Aid</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Fish & Wildlife Management</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Fishing</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Fly Fishing</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Forestry</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Game Design</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Gardening</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Genealogy</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Geocaching</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Geology</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Golf</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Graphic Arts</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Hiking</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Home Repairs</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Horsemanship</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Indian Lore</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Insect Study</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Inventing</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Journalism</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Kayaking</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Landscape Architecture</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Law</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Leatherwork</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Lifesaving</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Mammal Study</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Medicine</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Metalwork</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Mining in Society</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Model Design and Building</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Motorboating</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Moviemaking</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Music</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Nature</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Nuclear Science</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Oceanography</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Orienteering</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Painting</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Personal Fitness</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Personal Management</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Pets</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Photography</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Pioneering</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Plant Science</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Plumbing</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Pottery</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Programming</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Public Health</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Public Speaking</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Pulp and Paper</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Radio</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Railroading</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Reading</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Reptile & Amphibian Study</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Rifle Shooting</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Robotics</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Rowing</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Safety</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Salesmanship</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Scholarship</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Scouting Heritage</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Scuba Diving</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Sculpture</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Search and Rescue</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Shotgun Shooting</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><a href="#">PDF</a></td></tr>
+  <tr><td>Signs, Signals, and Codes</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Skating</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Small-Boat Sailing</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Snow Sports</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Soil & Water Conservation</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Space Exploration</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Sports</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Stamp Collecting</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Surveying</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Sustainability</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Swimming</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Textile</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Theater</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Traffic Safety</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Truck Transportation</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Veterinary Medicine</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Water Sports</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Weather</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Welding</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Whitewater</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Wilderness Survival</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Wood Carving</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+  <tr><td>Woodwork</td><td><a href="#">PDF</a> <a href="#">DOCX</a></td><td><a href="#">PDF</a></td></tr>
+        <tr><td colspan="4" style="background:#f7faff;font-size:0.98em;text-align:left;"><b>2010 Historical Merit Badges:</b> Carpentry - Pathfinding - Signaling - Tracking</td></tr>
+      </table>
+    </section>
+
+    <section class="section-block" id="ranks">
+      <h2 style="margin-top:0.2em;">Scout Ranks</h2>
+      <table class="ranks-table">
+        <tr>
+          <th>Rank</th>
+          <th>Workbooks</th>
+        </tr>
+        <tr>
+          <td>Scout badge</td>
+          <td><a href="#">PDF</a> <a href="#">DOCX</a></td>
+        </tr>
+        <tr>
+          <td>Tenderfoot rank</td>
+          <td><a href="#">PDF</a> <a href="#">DOCX</a></td>
+        </tr>
+        <tr>
+          <td>Second Class rank</td>
+          <td><a href="#">PDF</a> <a href="#">DOCX</a></td>
+        </tr>
+        <tr>
+          <td>First Class rank</td>
+          <td><a href="#">PDF</a> <a href="#">DOCX</a></td>
+        </tr>
+        <tr>
+          <td>Star rank</td>
+          <td><a href="#">PDF</a> <a href="#">DOCX</a></td>
+        </tr>
+        <tr>
+          <td>Life rank</td>
+          <td><a href="#">PDF</a> <a href="#">DOCX</a></td>
+        </tr>
+        <tr>
+          <td>Eagle Scout rank</td>
+          <td><a href="#">PDF</a> <a href="#">DOCX</a></td>
+        </tr>
+        <tr>
+          <td>Eagle Palms</td>
+          <td><a href="#">PDF</a> <a href="#">DOCX</a></td>
+        </tr>
+      </table>
+    </section>
+
+    <section class="section-block" id="positions">
+      <h2 style="margin-top:0.2em;">Scout Positions</h2>
+      <div class="positions-list">
+        <button class="basics-item" id="spl-btn" type="button" style="cursor:pointer;text-decoration:underline;background:#00509e;color:#fff;border:none;padding:0.5em 1.2em;border-radius:6px;font-size:1rem;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,0.07);transition:background 0.2s, color 0.2s;">Senior Patrol Leader (SPL)</button>
+        <button class="basics-item" id="aspl-btn" type="button" style="cursor:pointer;text-decoration:underline;background:#00509e;color:#fff;border:none;padding:0.5em 1.2em;border-radius:6px;font-size:1rem;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,0.07);transition:background 0.2s, color 0.2s;">Ast. Senior Patrol Leader (ASPL)</button>
+        <button class="basics-item" id="pl-btn" type="button" style="cursor:pointer;text-decoration:underline;background:#00509e;color:#fff;border:none;padding:0.5em 1.2em;border-radius:6px;font-size:1rem;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,0.07);transition:background 0.2s, color 0.2s;">Patrol Leader (PL)</button>
+        <button class="basics-item" id="apl-btn" type="button" style="cursor:pointer;text-decoration:underline;background:#00509e;color:#fff;border:none;padding:0.5em 1.2em;border-radius:6px;font-size:1rem;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,0.07);transition:background 0.2s, color 0.2s;">Ast. Patrol Leader (APL)</button>
+        <button class="basics-item" id="quartermaster-btn" type="button" style="cursor:pointer;text-decoration:underline;background:#00509e;color:#fff;border:none;padding:0.5em 1.2em;border-radius:6px;font-size:1rem;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,0.07);transition:background 0.2s, color 0.2s;">Quartermaster</button>
+        <button class="basics-item" id="scribe-btn" type="button" style="cursor:pointer;text-decoration:underline;background:#00509e;color:#fff;border:none;padding:0.5em 1.2em;border-radius:6px;font-size:1rem;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,0.07);transition:background 0.2s, color 0.2s;">Scribe</button>
+        <button class="basics-item" id="librarian-btn" type="button" style="cursor:pointer;text-decoration:underline;background:#00509e;color:#fff;border:none;padding:0.5em 1.2em;border-radius:6px;font-size:1rem;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,0.07);transition:background 0.2s, color 0.2s;">Librarian</button>
+        <button class="basics-item" id="historian-btn" type="button" style="cursor:pointer;text-decoration:underline;background:#00509e;color:#fff;border:none;padding:0.5em 1.2em;border-radius:6px;font-size:1rem;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,0.07);transition:background 0.2s, color 0.2s;">Historian</button>
+        <button class="basics-item" id="chaplain-btn" type="button" style="cursor:pointer;text-decoration:underline;background:#00509e;color:#fff;border:none;padding:0.5em 1.2em;border-radius:6px;font-size:1rem;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,0.07);transition:background 0.2s, color 0.2s;">Chaplain</button>
+        <button class="basics-item" id="instructor-btn" type="button" style="cursor:pointer;text-decoration:underline;background:#00509e;color:#fff;border:none;padding:0.5em 1.2em;border-radius:6px;font-size:1rem;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,0.07);transition:background 0.2s, color 0.2s;">Instructor</button>
+        <button class="basics-item" id="denchief-btn" type="button" style="cursor:pointer;text-decoration:underline;background:#00509e;color:#fff;border:none;padding:0.5em 1.2em;border-radius:6px;font-size:1rem;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,0.07);transition:background 0.2s, color 0.2s;">DENchief</button>
+        <button class="basics-item" id="bugler-btn" type="button" style="cursor:pointer;text-decoration:underline;background:#00509e;color:#fff;border:none;padding:0.5em 1.2em;border-radius:6px;font-size:1rem;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,0.07);transition:background 0.2s, color 0.2s;">Bugler</button>
+        <button class="basics-item" id="troopguide-btn" type="button" style="cursor:pointer;text-decoration:underline;background:#00509e;color:#fff;border:none;padding:0.5em 1.2em;border-radius:6px;font-size:1rem;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,0.07);transition:background 0.2s, color 0.2s;">Troop Guide</button>
+        <button class="basics-item" id="oarep-btn" type="button" style="cursor:pointer;text-decoration:underline;background:#00509e;color:#fff;border:none;padding:0.5em 1.2em;border-radius:6px;font-size:1rem;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,0.07);transition:background 0.2s, color 0.2s;">OA Rep</button>
+      </div>
+      <!-- Modals for Scout Positions -->
+      <dialog id="spl-modal">
+        <h2 style="margin-top:0;color:#00509e;font-size:1.2rem;">Senior Patrol Leader</h2>
+        <div style="max-height:60vh;overflow-y:auto;padding-right:0.5em;">
+          <p>The Senior Patrol Leader is elected by the Scouts to represent them as the top junior leader in the troop.</p>
+          <b>Reports To:</b> Scoutmaster<br>
+          <b>Duties:</b>
+          <ul>
+            <li>Run all troop meetings, events, activities, and the annual program planning conference.</li>
+            <li>Runs the Patrol Leader's Council meeting.</li>
+            <li>Appoints other troop junior leaders with the advice and counsel of the Scoutmaster.</li>
+            <li>Assigns duties and responsibilities to junior leaders.</li>
+            <li>Assists the Scoutmaster with Junior Leader Training.</li>
+          </ul>
+        </div>
+        <button id="close-spl" style="margin-top:1.2em;background:#00509e;color:#fff;border:none;padding:0.6em 1.5em;border-radius:6px;font-size:1rem;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,0.07);cursor:pointer;">Close</button>
+      </dialog>
+      <dialog id="aspl-modal">
+        <h2 style="margin-top:0;color:#00509e;font-size:1.2rem;">Assistant Senior Patrol Leader</h2>
+        <div style="max-height:60vh;overflow-y:auto;padding-right:0.5em;">
+          <p>The Assistant Senior Patrol Leader is the second highest ranking junior leader in the troop. The Assistant Senior Patrol Leader acts as the Senior Patrol Leader in the absence of the SPL or when called upon. He also provides leadership to other junior leaders in the troop.</p>
+          <b>Reports To:</b> Senior Patrol Leader<br>
+          <b>Duties:</b>
+          <ul>
+            <li>Helps the Senior Patrol Leader lead meetings and activities.</li>
+            <li>Runs the troop in the absence of the Senior Patrol Leader.</li>
+            <li>Helps train and supervise the Troop Scribe, Quartermaster, Instructor, Librarian, Historian, and Chaplain Aide.</li>
+            <li>Serves as a member of the Patrol Leader's Council.</li>
+          </ul>
+        </div>
+        <button id="close-aspl" style="margin-top:1.2em;background:#00509e;color:#fff;border:none;padding:0.6em 1.5em;border-radius:6px;font-size:1rem;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,0.07);cursor:pointer;">Close</button>
+      </dialog>
+      <dialog id="pl-modal">
+        <h2 style="margin-top:0;color:#00509e;font-size:1.2rem;">Patrol Leader</h2>
+        <div style="max-height:60vh;overflow-y:auto;padding-right:0.5em;">
+          <p>The Patrol Leader is the elected leader of his patrol. He represents his patrol on the Patrol Leader's Council.</p>
+          <b>Reports To:</b> Senior Patrol Leader<br>
+          <b>Duties:</b>
+          <ul>
+            <li>Appoints the Assistant Patrol Leader.</li>
+            <li>Represents the patrol on the Patrol Leader's Council</li>
+            <li>Plans and steers patrol meetings</li>
+            <li>Helps Scouts advance</li>
+            <li>Acts as the chief recruiter of new Scouts</li>
+            <li>Keeps patrol members informed</li>
+            <li>Knows what his patrol members and other leaders can do.</li>
+          </ul>
+        </div>
+        <button id="close-pl" style="margin-top:1.2em;background:#00509e;color:#fff;border:none;padding:0.6em 1.5em;border-radius:6px;font-size:1rem;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,0.07);cursor:pointer;">Close</button>
+      </dialog>
+      <dialog id="apl-modal">
+        <h2 style="margin-top:0;color:#00509e;font-size:1.2rem;">Assistant Patrol Leader</h2>
+        <div style="max-height:60vh;overflow-y:auto;padding-right:0.5em;">
+          <p>The Assistant Patrol Leader is appointed by the Patrol Leader and leads the patrol in his absence.</p>
+          <b>Reports To:</b> Patrol Leader<br>
+          <b>Duties:</b>
+          <ul>
+            <li>Helps the Patrol Leader plan and steer patrol meetings and activities.</li>
+            <li>Helps the Patrol Leader keep patrol members informed.</li>
+            <li>Helps the patrol get ready for all troop activities.</li>
+            <li>Represents his patrol at Patrol Leader's Council meetings when the Patrol Leader cannot attend.</li>
+            <li>Lends a hand controlling the patrol and building patrol spirit.</li>
+          </ul>
+        </div>
+        <button id="close-apl" style="margin-top:1.2em;background:#00509e;color:#fff;border:none;padding:0.6em 1.5em;border-radius:6px;font-size:1rem;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,0.07);cursor:pointer;">Close</button>
+      </dialog>
+      <dialog id="quartermaster-modal">
+        <h2 style="margin-top:0;color:#00509e;font-size:1.2rem;">Quartermaster</h2>
+        <div style="max-height:60vh;overflow-y:auto;padding-right:0.5em;">
+          <p>The Troop Quartermaster keeps track of troop equipment and sees that it is in good working order.</p>
+          <b>Reports To:</b> Assistant Senior Patrol Leader<br>
+          <b>Duties:</b>
+          <ul>
+            <li>Works with the Patrol Quartermasters on campouts.</li>
+            <li>Maintains inventories.</li>
+            <li>Responsible for loading and unloading the Troop truck for campouts.</li>
+            <li>Keeps records on patrol and troop equipment.</li>
+            <li>Makes sure equipment is in good working condition.</li>
+            <li>Issues equipment and makes sure it is returned in good condition.</li>
+            <li>Makes suggestions for new or replacement items.</li>
+            <li>Works with the Troop Committee member responsible for equipment.</li>
+          </ul>
+        </div>
+        <button id="close-quartermaster" style="margin-top:1.2em;background:#00509e;color:#fff;border:none;padding:0.6em 1.5em;border-radius:6px;font-size:1rem;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,0.07);cursor:pointer;">Close</button>
+      </dialog>
+      <dialog id="scribe-modal">
+        <h2 style="margin-top:0;color:#00509e;font-size:1.2rem;">Scribe</h2>
+        <div style="max-height:60vh;overflow-y:auto;padding-right:0.5em;">
+          <p>The Scribe keeps the troop records. He records the activities of the Patrol Leaders' Council and keeps a record of dues, advancement, and Scout attendance at troop meetings.</p>
+          <b>Reports To:</b> Assistant Senior Patrol Leader<br>
+          <b>Duties:</b>
+          <ul>
+            <li>Attends and keeps a log of Patrol Leaders' Council meetings.</li>
+            <li>Serves as the Troop secretary and maintains the attendance records at Troop Meetings, Campouts, Courts of Honor and Patrol Leader's Council.</li>
+            <li>Oversees the publication of the Troop newsletter.</li>
+          </ul>
+        </div>
+        <button id="close-scribe" style="margin-top:1.2em;background:#00509e;color:#fff;border:none;padding:0.6em 1.5em;border-radius:6px;font-size:1rem;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,0.07);cursor:pointer;">Close</button>
+      </dialog>
+      <dialog id="librarian-modal">
+        <h2 style="margin-top:0;color:#00509e;font-size:1.2rem;">Librarian</h2>
+        <div style="max-height:60vh;overflow-y:auto;padding-right:0.5em;">
+          <p>The Librarian takes care of troop literature.</p>
+          <b>Reports To:</b> Assistant Senior Patrol Leader<br>
+          <b>Duties:</b>
+          <ul>
+            <li>Sets up and takes care of a troop library.</li>
+            <li>Keeps records of books and pamphlets owned by the troop.</li>
+            <li>Adds new or replacement items as needed.</li>
+            <li>Keeps books and pamphlets available for borrowing.</li>
+            <li>Keeps a system for checking books and pamphlets in and out.</li>
+            <li>Follows up on late returns.</li>
+          </ul>
+        </div>
+        <button id="close-librarian" style="margin-top:1.2em;background:#00509e;color:#fff;border:none;padding:0.6em 1.5em;border-radius:6px;font-size:1rem;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,0.07);cursor:pointer;">Close</button>
+      </dialog>
+      <dialog id="historian-modal">
+        <h2 style="margin-top:0;color:#00509e;font-size:1.2rem;">Historian</h2>
+        <div style="max-height:60vh;overflow-y:auto;padding-right:0.5em;">
+          <p>The Troop Historian keeps a historical record or scrapbook of troop activities.</p>
+          <b>Reports To:</b> Assistant Senior Patrol Leader<br>
+          <b>Duties:</b>
+          <ul>
+            <li>Gathers pictures and facts about past troop activities and keeps them in a historical file or scrapbook.</li>
+            <li>Takes care of troop trophies, ribbons, and souvenirs of troop activities.</li>
+            <li>Keeps information about former members of the troop.</li>
+          </ul>
+        </div>
+        <button id="close-historian" style="margin-top:1.2em;background:#00509e;color:#fff;border:none;padding:0.6em 1.5em;border-radius:6px;font-size:1rem;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,0.07);cursor:pointer;">Close</button>
+      </dialog>
+      <dialog id="chaplain-modal">
+        <h2 style="margin-top:0;color:#00509e;font-size:1.2rem;">Chaplain</h2>
+        <div style="max-height:60vh;overflow-y:auto;padding-right:0.5em;">
+          <p>The Chaplain Aide works with the Troop Chaplain to meet the religious needs of Scouts in the troop. He also works to promote the religious emblems program.</p>
+          <b>Reports To:</b> Assistant Senior Patrol Leader / Chaplain<br>
+          <b>Duties:</b>
+          <ul>
+            <li>Assists the Troop Chaplain with religious services at troop activities.</li>
+            <li>Tells Scouts about the religious emblems program for their faith.</li>
+            <li>Makes sure religious holidays are considered during troop program planning.</li>
+            <li>Helps plan for religious observance in troop activities, especially campouts and Courts of Honor.</li>
+          </ul>
+        </div>
+        <button id="close-chaplain" style="margin-top:1.2em;background:#00509e;color:#fff;border:none;padding:0.6em 1.5em;border-radius:6px;font-size:1rem;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,0.07);cursor:pointer;">Close</button>
+      </dialog>
+      <dialog id="instructor-modal">
+        <h2 style="margin-top:0;color:#00509e;font-size:1.2rem;">Instructor</h2>
+        <div style="max-height:60vh;overflow-y:auto;padding-right:0.5em;">
+          <p>The Instructor teaches Scouting skills.</p>
+          <b>Reports To:</b> Assistant Senior Patrol Leader<br>
+          <b>Duties:</b>
+          <ul>
+            <li>Teaches basic Scouting skills in troop and patrols.</li>
+          </ul>
+        </div>
+        <button id="close-instructor" style="margin-top:1.2em;background:#00509e;color:#fff;border:none;padding:0.6em 1.5em;border-radius:6px;font-size:1rem;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,0.07);cursor:pointer;">Close</button>
+      </dialog>
+      <dialog id="denchief-modal">
+        <h2 style="margin-top:0;color:#00509e;font-size:1.2rem;">DENchief</h2>
+        <div style="max-height:60vh;overflow-y:auto;padding-right:0.5em;">
+          <p>The Den Chief works with the Cub Scouts, Webelos Scouts, and Den Leaders in the Cub Scout pack.</p>
+          <b>Reports To:</b> Scoutmaster / Den Leader<br>
+          <b>Duties:</b>
+          <ul>
+            <li>Knows the purposes of Cub Scouting.</li>
+            <li>Helps Cub Scouts advance through Cub Scout ranks.</li>
+            <li>Encourages Cub Scouts to join a Boy Scout troop upon graduation.</li>
+            <li>Assists with activities in the den meetings.</li>
+            <li>Is a friend to the boys in the den.</li>
+            <li>Helps out at weekly den meetings and monthly pack meetings.</li>
+            <li>Meets with adult members of the den, pack, and troop as necessary.</li>
+          </ul>
+        </div>
+        <button id="close-denchief" style="margin-top:1.2em;background:#00509e;color:#fff;border:none;padding:0.6em 1.5em;border-radius:6px;font-size:1rem;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,0.07);cursor:pointer;">Close</button>
+      </dialog>
+      <dialog id="bugler-modal">
+        <h2 style="margin-top:0;color:#00509e;font-size:1.2rem;">Bugler</h2>
+        <div style="max-height:60vh;overflow-y:auto;padding-right:0.5em;">
+          <p>The Bugler sounds bugle calls as required.</p>
+          <b>Reports To:</b> Assistant Senior Patrol Leader<br>
+          <b>Duties:</b>
+          <ul>
+            <li>Sound the following bugle calls as required: First Call, Reveille, Mess, To the Colors, Officers, Drill, Assembly, Recall, Fatigue, Church, Fire, Swimming, Retreat, Call to Quarters, Taps</li>
+          </ul>
+        </div>
+        <button id="close-bugler" style="margin-top:1.2em;background:#00509e;color:#fff;border:none;padding:0.6em 1.5em;border-radius:6px;font-size:1rem;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,0.07);cursor:pointer;">Close</button>
+      </dialog>
+      <dialog id="troopguide-modal">
+        <h2 style="margin-top:0;color:#00509e;font-size:1.2rem;">Troop Guide</h2>
+        <div style="max-height:60vh;overflow-y:auto;padding-right:0.5em;">
+          <p>The Troop Guide works with new Scouts. He helps them feel comfortable and earn their First Class rank in their first year.</p>
+          <b>Reports To:</b> Assistant Scoutmaster for the New Scout Patrol<br>
+          <b>Duties:</b>
+          <ul>
+            <li>Introduces new Scouts to troop operations.</li>
+            <li>Guides new Scouts through early Scouting activities</li>
+            <li>Shields new Scouts from harassment by older Scouts.</li>
+            <li>Helps new Scouts earn First Class in their first year.</li>
+            <li>Teaches basic Scout skills.</li>
+            <li>Coaches the patrol leader of the new Scout patrol on his duties.</li>
+            <li>Works with the patrol leader at Patrol Leaders' Council meetings.</li>
+            <li>Attends Patrol Leaders' Council meetings with the patrol leader of the new Scout patrol.</li>
+            <li>Assists the Assistant Scoutmaster with training.</li>
+            <li>Counsels individual Scouts on Scouting challenges.</li>
+          </ul>
+        </div>
+        <button id="close-troopguide" style="margin-top:1.2em;background:#00509e;color:#fff;border:none;padding:0.6em 1.5em;border-radius:6px;font-size:1rem;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,0.07);cursor:pointer;">Close</button>
+      </dialog>
+      <dialog id="oarep-modal">
+        <h2 style="margin-top:0;color:#00509e;font-size:1.2rem;">OA Rep</h2>
+        <div style="max-height:60vh;overflow-y:auto;padding-right:0.5em;">
+          <p>The Order of the Arrow Troop Representative is a youth liaison serving between the local OA lodge or chapter and his unit.</p>
+          <b>Reports To:</b> Assistant Senior Patrol Leader<br>
+          <b>Duties:</b>
+          <ul>
+            <li>Serves as a communication link between the lodge or chapter and the troop.</li>
+            <li>Encourages year round and resident camping in the troop.</li>
+            <li>Encourages older Scout participation in high adventure programs.</li>
+            <li>Encourages Scouts to actively participate in community service projects.</li>
+            <li>Assists with leadership skills training in the troop.</li>
+            <li>Encourages Arrowmen to assume leadership positions in the troop.</li>
+            <li>Encourages Arrowmen in the troop to be active participants in the lodge and/or chapter activities and to seal their membership in the Order by becoming Brotherhood members.</li>
+            <li>Sets a good example.</li>
+          </ul>
+        </div>
+        <button id="close-oarep" style="margin-top:1.2em;background:#00509e;color:#fff;border:none;padding:0.6em 1.5em;border-radius:6px;font-size:1rem;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,0.07);cursor:pointer;">Close</button>
+      </dialog>
+    </section>
+
+
+
+    <section class="section-block" id="patrol">
+      <h2 style="margin-top:0.2em;">Patrol Method</h2>
+      <blockquote style="font-size:1.1em;color:#003366;border-left:4px solid #00509e;padding-left:1em;margin-bottom:1.2em;">
+        "The patrol system is not one method in which Scouting for boys can be carried on. It is the only method."<br>
+        <span style="font-style:italic;">- Lord Baden-Powell, Scouting's founder</span>
+      </blockquote>
+      <h3 style="margin-top:0.5em;color:#00509e;">What is the Patrol anyway?</h3>
+      <p>The patrol is a small group of Scouts who belong to a troop and who are usually similar in age, development, and interests. The patrol method allows Scouts to interact in a small group outside the larger troop context, working together as a team and sharing the responsibility of making their patrol a success. A patrol takes pride in its identity, and the members strive to make their patrol the best it can be. Patrols will sometimes join with other patrols to learn skills and complete advancement requirements. At other times they will compete against those same patrols in Scout skills and athletic competitions.</p>
+      <p>The members of each patrol elect one of their own to serve as patrol leader. The troop determines the requirements for patrol leaders, such as rank and age. To give more youths the opportunity to lead, most troops elect patrol leaders at least twice a year. Some may have elections more often. The patrol size depends upon a troop's enrollment and the needs of its members.</p>
+      <h3 style="margin-top:1.2em;color:#00509e;">Duties as a Patrol Leader</h3>
+      <p>When you accepted the position of patrol leader, you agreed to provide service and leadership to your patrol and troop. No doubt you will take this responsibility seriously, but you will also find it fun and rewarding. As a patrol leader, you are expected to do the following:</p>
+      <ul style="margin-left:1.2em;line-height:1.7;">
+        <li>Plan and lead patrol meetings and activities.</li>
+        <li>Keep patrol members informed.</li>
+        <li>Assign each patrol member a specific duty.</li>
+        <li>Represent your patrol at all patrol leaders' council meetings and the annual program planning conference.</li>
+        <li>Prepare the patrol to participate in all troop activities.</li>
+        <li>Work with other troop leaders to make the troop run well.</li>
+        <li>Know the abilities of each patrol member.</li>
+        <li>Set a good example.</li>
+        <li>Wear the Scout uniform correctly.</li>
+        <li>Live by the Scout Oath and Law.</li>
+        <li>Show and develop patrol spirit.</li>
+      </ul>
+    </section>
+<section class="section-block" id="eagles">
+      <h2 style="margin-top:0.2em;">Troop 77 Eagle Scouts</h2>
+      <p style="font-size:1rem; color:#003366;">
+        It is estimated that only 2% of all young men who join scouting will earn the Eagle Badge. Earning your Eagle Badge requires a tremendous amount of dedication and commitment, along with a great deal of perseverance and hard work.<br><br>
+        An Eagle Scout Project is the final step towards earning the coveted Eagle Rank and every Scout has to complete one. The funding for the Eagle Projects can come from a variety of sources, but are normally raised by the Scout via fundraising projects involving the whole Troop. Since every Scout will ultimately have to complete an Eagle Project and will more than likely need to enlist the support of their fellow Scouts to raise the money needed, it is in their best interest to support their fellow Scouts in raising the funds for their projects.
+      </p>
+      <div class="eagle-list" style="margin-bottom:2rem;">
+        <div class="eagle-card"><b>Yanni Tsiabasis</b> <span class="eagle-date">- January 20, 2022</span><br>
+          <span class="eagle-project">Eagle Project: Sign/Banner holders for K-Tech. New Port Richey, Florida</span>
+        </div>
+        <div class="eagle-card"><b>Evan Knoop</b> <span class="eagle-date">- June 9, 2021</span><br>
+          <span class="eagle-project">Eagle Project: Fire Pit, Hope United Methodist Church New Port Richey, Florida</span>
+        </div>
+        <div class="eagle-card"><b>Demetrios Athanasoulis</b> <span class="eagle-date">- May 21, 2021</span><br>
+          <span class="eagle-project">Eagle Project: Shade Structure - St George Greek Orthodox Church New Port Richey, Florida</span>
+        </div>
+        <div class="eagle-card"><b>Trenton Doherty</b> <span class="eagle-date">- March 24, 2021</span><br>
+          <span class="eagle-project">Eagle Project: Fishing Line Recycling, several locations, Pasco, Florida</span>
+        </div>
+        <div class="eagle-card"><b>Geoff Dziena</b> <span class="eagle-date">- January 2, 2021</span><br>
+          <span class="eagle-project">Eagle Project: Umbrella Stands at the Energy & Marine Center. Port Richey, Florida</span>
+        </div>
+        <div class="eagle-card"><b>Henry Koljeski</b> <span class="eagle-date">- July 18, 2019</span><br>
+          <span class="eagle-project">Eagle Project: Aquaponics Tank at the Energy & Marine Center. Port Richey, Florida</span>
+        </div>
+        <div class="eagle-card"><b>Noah Ealy</b> <span class="eagle-date">- May 24, 2019</span><br>
+          <span class="eagle-project">Eagle Project: Educational Signage at the Energy & Marine Center. Port Richey, Florida</span>
+        </div>
+        <div class="eagle-card"><b>Ben Covert</b> <span class="eagle-date">- April 19, 2019</span><br>
+          <span class="eagle-project">Eagle Project: Children’s Garden for St. Thomas Aquinas Church, Port Richey, Florida</span>
+        </div>
+        <div class="eagle-card"><b>Ben McWhirter</b> <span class="eagle-date">- February 21, 2019</span><br>
+          <span class="eagle-project">Eagle Project: New Ceiling in the Fellowship Hall for Sharon United Methodist Church, Decatur, Illinois</span>
+        </div>
+        <div class="eagle-card"><b>James Sanderson</b> <span class="eagle-date">- December 20, 2017</span><br>
+          <span class="eagle-project">Eagle Project: <i>Not listed</i></span>
+        </div>
+        <div class="eagle-card"><b>Jared Bell</b> <span class="eagle-date">- July 11, 2017</span><br>
+          <span class="eagle-project">Eagle Project: <i>Not listed</i></span>
+        </div>
+        <div class="eagle-card"><b>Atef Alhassan</b> <span class="eagle-date">- April 10, 2017</span><br>
+          <span class="eagle-project">Eagle Project: <i>Not listed</i></span>
+        </div>
+        <div class="eagle-card"><b>Ian Tannenbaum</b> <span class="eagle-date">- July 11, 2016</span><br>
+          <span class="eagle-project">Eagle Project: <i>Not listed</i></span>
+        </div>
+        <div class="eagle-card"><b>Joshua Adkins</b> <span class="eagle-date">- July 11, 2016</span><br>
+          <span class="eagle-project">Eagle Project: Equip Shriners vans with Windows tablets so children can watch movies, listen to music or play games on their rides to and from the hospital.</span>
+        </div>
+        <div class="eagle-card"><b>Joey Mitchell</b> <span class="eagle-date">- June 10, 2016</span><br>
+          <span class="eagle-project">Eagle Project: <i>Not listed</i></span>
+        </div>
+        <div class="eagle-card"><b>Connor Beckman</b> <span class="eagle-date">- January 11, 2016</span><br>
+          <span class="eagle-project">Eagle Project: <i>Not listed</i></span>
+        </div>
+        <div class="eagle-card"><b>David Torgerson</b> <span class="eagle-date">- June 8, 2015</span><br>
+          <span class="eagle-project">Eagle Project: <i>Not listed</i></span>
+        </div>
+        <div class="eagle-card"><b>Jack Abberger</b> <span class="eagle-date">- January 12, 2015</span><br>
+          <span class="eagle-project">Eagle Project: <i>Not listed</i></span>
+        </div>
+        <div class="eagle-card"><b>Jordan Groesbeck</b> <span class="eagle-date">- October 13, 2014</span><br>
+          <span class="eagle-project">Eagle Project: <i>Not listed</i></span>
+        </div>
+        <div class="eagle-card"><b>Zachary Washburn</b> <span class="eagle-date">- September 8, 2014</span><br>
+          <span class="eagle-project">Eagle Project: <i>Not listed</i></span>
+        </div>
+        <div class="eagle-card"><b>Timothy Weaver</b> <span class="eagle-date">- February 10, 2014</span><br>
+          <span class="eagle-project">Eagle Project: <i>Not listed</i></span>
+        </div>
+        <div class="eagle-card"><b>Tyler Burtt</b> <span class="eagle-date">- February 10, 2014</span><br>
+          <span class="eagle-project">Eagle Project: <i>Not listed</i></span>
+        </div>
+        <div class="eagle-card"><b>Zachary Fecanin</b> <span class="eagle-date">- February 10, 2014</span><br>
+          <span class="eagle-project">Eagle Project: <i>Not listed</i></span>
+        </div>
+        <div class="eagle-card"><b>Connor Washburn</b> <span class="eagle-date">- March 11, 2013</span><br>
+          <span class="eagle-project">Eagle Project: <i>Not listed</i></span>
+        </div>
+        <div class="eagle-card"><b>Alexander Bolduc</b> <span class="eagle-date">- May 9, 2011</span><br>
+          <span class="eagle-project">Eagle Project: Covered Picnic Bench at Starkey Park</span>
+        </div>
+        <div class="eagle-card"><b>Jack Vann</b><br>
+          <span class="eagle-project">Eagle Project: Barbeque Grill Station at Trinity Presbyterian Church of Seven Springs</span>
+        </div>
+        <div class="eagle-card"><b>Brian Martin</b> <span class="eagle-date">- December 13, 2010</span><br>
+          <span class="eagle-project">Eagle Project: Meditation garden at Trinity Presbyterian Church of Seven Springs</span>
+        </div>
+        <div class="eagle-card"><b>Carl Unkle</b> <span class="eagle-date">- June 14, 2010</span><br>
+          <span class="eagle-project">Eagle Project: <i>Not listed</i></span>
+        </div>
+        <div class="eagle-card"><b>Patrick Church</b> <span class="eagle-date">- May 26, 2010</span><br>
+          <span class="eagle-project">Eagle Project: <i>Not listed</i></span>
+        </div>
+        <div class="eagle-card"><b>Jason Brown</b> <span class="eagle-date">- December 8, 2008</span><br>
+          <span class="eagle-project">Eagle Project: Plan and install new playground equipment, along with a new fence around the playground, and 100 cubic yards of playground mulch to benefit the Children’s Ministry of Trinity Presbyterian Church of Seven Springs</span>
+        </div>
+        <div class="eagle-card"><b>Thomas Motley</b> <span class="eagle-date">- October 13, 2008</span><br>
+          <span class="eagle-project">Eagle Project: Plan and install an outdoor volleyball court to benefit the Teen Ministry of Trinity Presbyterian Church of Seven Springs</span>
+        </div>
+        <div class="eagle-card"><b>Jeffrey Motley</b> <span class="eagle-date">- October 13, 2008</span><br>
+          <span class="eagle-project">Eagle Project: Plan and install a "Walk of Faith" Memorial Brick Pathway for the Trinity Presbyterian Church of Seven Springs</span>
+        </div>
+      </div>
+   
+
+    <section class="section-block" id="documents">
+      <h2 style="margin-top:0.2em;">Documents</h2>
+      <p>Links to important documents and resources will be posted here.</p>
+    </section>
+
+    
+  </main>
+  <style>
+    .back-home-bar {
+      text-align: left;
+      max-width: 1050px;
+      margin: 0 auto 0.5rem auto;
+      padding-left: 1.2rem;
+    }
+    .back-home-btn {
+      display: inline-flex;
+      align-items: center;
+      background: #00509e;
+      color: #fff;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 1.08rem;
+      border-radius: 6px;
+      padding: 0.5em 1.2em 0.5em 1em;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+      margin-top: 0.5rem;
+      transition:background 0.2s, color 0.2s;
+      border: none;
+      cursor: pointer;
+      gap: 0.5em;
+    }
+    .back-home-btn:hover {
+      background: #ffd700;
+      color: #002f6c;
+    }
+    .scout-nav {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 1.1rem 0 0.3rem 0;
+      z-index: 3;
+      position: relative;
+      flex-wrap: wrap;
+    }
+    .scout-nav a {
+      background: #00509e;
+      color: #fff;
+      padding: 0.5rem 1.1rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 700;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+      transition: background 0.2s, color 0.2s;
+      margin-bottom: 0.3rem;
+    }
+    .scout-nav a:hover {
+      background: #ffd700;
+      color: #002f6c;
+    }
+    .section-block {
+      background: #f7faff;
+      border-radius: 14px;
+      box-shadow: 0 2px 12px rgba(0,47,108,0.07);
+      margin-bottom: 2.5rem;
+      padding: 2.2rem 1.5rem 1.5rem 1.5rem;
+      border: 1.5px solid #e2eafc;
+      transition: box-shadow 0.2s;
+    }
+    .section-block:hover {
+      box-shadow: 0 6px 24px rgba(0,47,108,0.13);
+    }
+  </style>
+  <style>
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      overflow: auto;
+      background: rgba(0,0,0,0.45);
+      transition: opacity 0.2s;
+    }
+    .modal-content {
+      background: #fff;
+      margin: 5% auto;
+      padding: 2rem 2.2rem 1.5rem 2.2rem;
+      border: 1.5px solid #e2eafc;
+      border-radius: 14px;
+      max-width: 600px;
+      box-shadow: 0 6px 32px rgba(0,47,108,0.18);
+      position: relative;
+      font-size: 1.08rem;
+      color: #222;
+    }
+    .modal-content h3 {
+      margin-top: 0;
+      color: #00509e;
+      font-size: 1.3rem;
+    }
+    .close {
+      color: #aaa;
+      position: absolute;
+      top: 1.1rem;
+      right: 1.3rem;
+      font-size: 2rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+    .close:hover {
+      color: #00509e;
+    }
+  </style>
+  <script>
+    // Modal logic for all basics and positions
+    document.addEventListener('DOMContentLoaded', function() {
+      const modals = [
+        // Basics
+        { btn: 'scout-oath-btn', modal: 'scout-oath-modal', close: 'close-scout-oath' },
+        { btn: 'scout-law-btn', modal: 'scout-law-modal', close: 'close-scout-law' },
+        { btn: 'scout-salute-btn', modal: 'scout-salute-modal', close: 'close-scout-salute' },
+        { btn: 'scout-motto-btn', modal: 'scout-motto-modal', close: 'close-scout-motto' },
+        { btn: 'scout-slogan-btn', modal: 'scout-slogan-modal', close: 'close-scout-slogan' },
+        { btn: 'scout-handshake-btn', modal: 'scout-handshake-modal', close: 'close-scout-handshake' },
+        { btn: 'scout-sign-btn', modal: 'scout-sign-modal', close: 'close-scout-sign' },
+        { btn: 'scout-emblem-btn', modal: 'scout-emblem-modal', close: 'close-scout-emblem' },
+        { btn: 'scout-uniform-btn', modal: 'scout-uniform-modal', close: 'close-scout-uniform' },
+        { btn: 'outdoor-code-btn', modal: 'outdoor-code-modal', close: 'close-outdoor-code' },
+        // Positions
+        { btn: 'spl-btn', modal: 'spl-modal', close: 'close-spl' },
+        { btn: 'aspl-btn', modal: 'aspl-modal', close: 'close-aspl' },
+        { btn: 'pl-btn', modal: 'pl-modal', close: 'close-pl' },
+        { btn: 'apl-btn', modal: 'apl-modal', close: 'close-apl' },
+        { btn: 'quartermaster-btn', modal: 'quartermaster-modal', close: 'close-quartermaster' },
+        { btn: 'scribe-btn', modal: 'scribe-modal', close: 'close-scribe' },
+        { btn: 'librarian-btn', modal: 'librarian-modal', close: 'close-librarian' },
+        { btn: 'historian-btn', modal: 'historian-modal', close: 'close-historian' },
+        { btn: 'chaplain-btn', modal: 'chaplain-modal', close: 'close-chaplain' },
+        { btn: 'instructor-btn', modal: 'instructor-modal', close: 'close-instructor' },
+        { btn: 'denchief-btn', modal: 'denchief-modal', close: 'close-denchief' },
+        { btn: 'bugler-btn', modal: 'bugler-modal', close: 'close-bugler' },
+        { btn: 'troopguide-btn', modal: 'troopguide-modal', close: 'close-troopguide' },
+        { btn: 'oarep-btn', modal: 'oarep-modal', close: 'close-oarep' }
+      ];
+      modals.forEach(function(ref) {
+        const btn = document.getElementById(ref.btn);
+        const modal = document.getElementById(ref.modal);
+        const closeBtn = document.getElementById(ref.close);
+        if(btn && modal && closeBtn) {
+          btn.onclick = function() { modal.showModal(); };
+          closeBtn.onclick = function() { modal.close(); };
+        }
+      });
+    });
+  </script>
+</body>
+</html>

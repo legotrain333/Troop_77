@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troop 77 Campouts</title>
+    <link rel="icon" type="image/webp" href="BSA_Logo.webp">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background: linear-gradient(135deg, #e2eafc 0%, #b6ccfe 100%);
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat, #002f6c;
+            color: #fff;
+            padding: 2.5rem 0 1.5rem 0;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 2px 12px rgba(0,47,108,0.10);
+        }
+        header::after {
+            content: '';
+            position: absolute;
+            left: 0; right: 0; top: 0; bottom: 0;
+            background: rgba(0,47,108,0.55);
+            z-index: 1;
+        }
+        header > * {
+            position: relative;
+            z-index: 2;
+        }
+        .bsa-logo-header {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 0.5rem;
+            background: #fff;
+            border-radius: 50%;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+            object-fit: contain;
+        }
+        header h1 {
+            font-size: 2.3rem;
+            font-weight: 700;
+            margin: 0.7rem 0 0 0;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+        }
+        .bsa-logo-header {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 0.5rem;
+            background: #fff;
+            border-radius: 50%;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+            object-fit: contain;
+        }
+        .motto {
+            font-size: 1.25rem;
+            color: #003366;
+            text-align: center;
+            margin: 2.2rem auto 2.7rem auto;
+            font-style: italic;
+            background: #f7faff;
+            border-radius: 12px;
+            max-width: 750px;
+            padding: 1.2rem 1.5rem 1.5rem 1.5rem;
+            box-shadow: 0 4px 18px rgba(0,47,108,0.08);
+        }
+        .campout-nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 1.2rem 0 2.5rem 0;
+            z-index: 3;
+            position: relative;
+        }
+        .campout-nav a {
+            background: #00509e;
+            color: #fff;
+            padding: 0.7rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 1.05rem;
+            font-weight: 700;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+            transition: background 0.2s, color 0.2s;
+        }
+        .campout-nav a:hover {
+            background: #ffd700;
+            color: #002f6c;
+        }
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+        }
+        .placeholder {
+            color: #888;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        .campout-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin: 1.5rem 0 2.5rem 0;
+            justify-content: flex-start;
+        }
+        .campout-card {
+            background: #f7faff;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,47,108,0.08);
+            padding: 1.1em 1.5em 1.1em 1.5em;
+            border: 1.5px solid #e2eafc;
+            min-width: 180px;
+            max-width: 220px;
+            flex: 1 1 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            transition: box-shadow 0.2s;
+        }
+        .campout-card:hover {
+            box-shadow: 0 6px 24px rgba(0,47,108,0.13);
+            border-color: #ffd700;
+        }
+        .campout-month {
+            font-size: 1.1em;
+            font-weight: 700;
+            color: #00509e;
+            margin-bottom: 0.2em;
+        }
+        .campout-title {
+            font-size: 1.15em;
+            font-weight: 600;
+            color: #003366;
+            margin-bottom: 0.1em;
+        }
+        .campout-location {
+            font-size: 1em;
+            color: #444;
+        }
+        .docs-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.7em;
+            margin: 1.2em 0 2em 0;
+        }
+        .doc-link {
+            background: #f7faff;
+            border-radius: 8px;
+            padding: 0.7em 1.2em;
+            color: #00509e;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1.08em;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+            border: 1.2px solid #e2eafc;
+            display: flex;
+            align-items: center;
+            gap: 0.7em;
+            transition: box-shadow 0.2s, border-color 0.2s, background 0.2s;
+        }
+        .doc-link:hover {
+            background: #ffd700;
+            color: #002f6c;
+            border-color: #ffd700;
+        }
+        .doc-icon {
+            font-size: 1.3em;
+            margin-right: 0.3em;
+        }
+        .summer-camps {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin: 1.5rem 0 2.5rem 0;
+            justify-content: flex-start;
+        }
+        .summer-camp-card {
+            background: #f7faff;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,47,108,0.08);
+            padding: 1.1em 1.5em 1.1em 1.5em;
+            border: 1.5px solid #e2eafc;
+            min-width: 180px;
+            max-width: 220px;
+            flex: 1 1 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            transition: box-shadow 0.2s;
+        }
+        .summer-camp-card:hover {
+            box-shadow: 0 6px 24px rgba(0,47,108,0.13);
+            border-color: #ffd700;
+        }
+        .camp-year {
+            font-size: 1.1em;
+            font-weight: 700;
+            color: #00509e;
+            margin-bottom: 0.2em;
+        }
+        .camp-name {
+            font-size: 1.15em;
+            font-weight: 600;
+            color: #003366;
+            margin-bottom: 0.1em;
+        }
+        .camp-location {
+            font-size: 1em;
+            color: #444;
+        }
+        .camp-dates {
+            font-size: 0.98em;
+            color: #666;
+            margin-top: 0.2em;
+        }
+        .campout-timeline {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 2.5rem 0 1.5rem 0;
+            justify-content: flex-start;
+        }
+        .year-block {
+            background: #f7faff;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,47,108,0.08);
+            padding: 1.1em 1.5em 1.1em 1.5em;
+            border: 1.5px solid #e2eafc;
+            min-width: 180px;
+            max-width: 220px;
+            flex: 1 1 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+            transition: box-shadow 0.2s;
+        }
+        .year-block:hover {
+            box-shadow: 0 6px 24px rgba(0,47,108,0.13);
+            border-color: #ffd700;
+        }
+        .year {
+            font-size: 1.1em;
+            font-weight: 700;
+            color: #00509e;
+            margin-bottom: 0.2em;
+        }
+        .year-block ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .year-block li {
+            font-size: 1em;
+            color: #444;
+            margin-bottom: 0.3em;
+            display: flex;
+            align-items: center;
+        }
+        .month {
+            display: inline-block;
+            min-width: 2.5em;
+            font-weight: 600;
+            color: #003366;
+            margin-right: 0.5em;
+        }
+        .cancelled {
+            color: #c00;
+            font-size: 0.95em;
+            font-weight: 600;
+            margin-left: 0.5em;
+            background: #ffeaea;
+            border-radius: 5px;
+            padding: 0.1em 0.5em;
+        }
+        .campout-timeline-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+            margin: 2.5rem 0 1.5rem 0;
+        }
+        .year-block {
+            background: linear-gradient(135deg, #f7faff 60%, #e2eafc 100%);
+            border-radius: 14px;
+            box-shadow: 0 2px 12px rgba(0,47,108,0.10);
+            padding: 1.3em 2.2em 1.3em 2.2em;
+            border: 1.5px solid #e2eafc;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            transition: box-shadow 0.2s, border-color 0.2s;
+            margin-bottom: 0;
+            min-height: 260px;
+            max-width: 420px;
+        }
+        .year {
+            font-size: 1.25em;
+            font-weight: 800;
+            color: #00509e;
+            margin-bottom: 0.5em;
+            letter-spacing: 1px;
+        }
+        .year-block ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+        }
+        .year-block li {
+            font-size: 1.05em;
+            color: #333;
+            margin-bottom: 0.4em;
+            display: flex;
+            align-items: center;
+            border-left: 3px solid #ffd700;
+            padding-left: 0.7em;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 1px 3px rgba(0,47,108,0.04);
+            margin-top: 0.2em;
+        }
+        .month {
+            display: inline-block;
+            min-width: 2.5em;
+            font-weight: 700;
+            color: #003366;
+            margin-right: 0.7em;
+        }
+        .cancelled {
+            color: #c00;
+            font-size: 0.97em;
+            font-weight: 700;
+            margin-left: 0.7em;
+            background: #ffeaea;
+            border-radius: 5px;
+            padding: 0.1em 0.6em;
+        }
+        @media (max-width: 700px) {
+            .campout-timeline-grid {
+                grid-template-columns: 1fr;
+            }
+            .year-block {
+                min-height: unset;
+            }
+            .back-home-btn {
+                margin: 0.7rem 0 0 0.7rem;
+                padding: 0.5rem 1rem;
+                font-size: 0.98rem;
+            }
+        }
+        .back-home-btn {
+            display: inline-flex;
+            align-items: center;
+            background: #fff;
+            color: #00509e;
+            padding: 0.7rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1.08rem;
+            font-weight: 700;
+            box-shadow: 0 2px 8px rgba(0,47,108,0.10);
+            border: 2px solid #00509e;
+            transition: background 0.2s, color 0.2s, border-color 0.2s;
+            margin: 1.2rem 0 0 1.2rem;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 10;
+        }
+        .back-home-btn:hover {
+            background: #00509e;
+            color: #fff;
+            border-color: #ffd700;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="back-home-btn">
+            <img src="BSA_Logo.webp" alt="BSA Logo" style="height:1.3em;width:1.3em;vertical-align:middle;margin-right:0.5em;border-radius:50%;background:#fff;box-shadow:0 1px 4px rgba(0,0,0,0.10);"> Back to Home
+        </a>
+        <img src="BSA_Logo.webp" alt="BSA Logo" class="bsa-logo-header">
+        <h1>Troop 77 Campouts</h1>
+        <nav class="campout-nav">
+            <a href="#map">Trip Map</a>
+            <a href="#thisyear">This Year</a>
+            <a href="#prev">Prev. Camps</a>
+            <a href="#docs">Camping Docs</a>
+            <a href="#summer">Summer Camps</a>
+        </nav>
+    </header>
+    <main>
+    
+        <section id="map">
+            <h2>Trip Map</h2>
+            <div style="display:flex;justify-content:center;margin:2rem 0;">
+                <iframe src="https://www.google.com/maps/d/embed?mid=1YyDGtmjNKldSg20YJcp_o8dm6sA&ehbc=2E312F" width="640" height="480" style="border:0;max-width:100%;"></iframe>
+            </div>
+        </section>
+        <section id="thisyear">
+            <h2>This Year</h2>
+            <div class="campout-cards">
+                <div class="campout-card">
+                    <div class="campout-month">September</div>
+                    <div class="campout-title">Canoe Trip</div>
+                    <div class="campout-location">Weeki Wachee River</div>
+                </div>
+                <div class="campout-card">
+                    <div class="campout-month">October</div>
+                    <div class="campout-title">Camping</div>
+                    <div class="campout-location">Starkey Park</div>
+                </div>
+                <div class="campout-card">
+                    <div class="campout-month">November</div>
+                    <div class="campout-title">Shooting Sports</div>
+                    <div class="campout-location">Smith Gun Range</div>
+                </div>
+                <div class="campout-card">
+                    <div class="campout-month">December</div>
+                    <div class="campout-title">Winter Campout</div>
+                    <div class="campout-location">Camp Soule</div>
+                </div>
+            </div>
+        </section>
+        <section id="docs">
+            <h2>Camping Docs</h2>
+            <div class="docs-list">
+                <a class="doc-link" href="#"><span class="doc-icon">📄</span> 2025-2026 Annual Permission Slip (PDF)</a>
+                <a class="doc-link" href="#"><span class="doc-icon">🧳</span> Troop 77 Packing List (PDF)</a>
+                <a class="doc-link" href="#"><span class="doc-icon">🍳</span> Campout Menu Planner (Excel)</a>
+                <a class="doc-link" href="#"><span class="doc-icon">🩺</span> Medical Form (BSA Parts A & B)</a>
+            </div>
+        </section>
+        <section id="summer">
+            <h2>Summer Camps</h2>
+            <div class="summer-camps">
+                <div class="summer-camp-card">
+                    <div class="camp-year">2025</div>
+                    <div class="camp-name">Camp Daniel Boone</div>
+                    <div class="camp-location">North Carolina</div>
+                    <div class="camp-dates">June 15-21</div>
+                </div>
+                <div class="summer-camp-card">
+                    <div class="camp-year">2024</div>
+                    <div class="camp-name">Skymont Scout Reservation</div>
+                    <div class="camp-location">Tennessee</div>
+                    <div class="camp-dates">June 10-16</div>
+                </div>
+                <div class="summer-camp-card">
+                    <div class="camp-year">2023</div>
+                    <div class="camp-name">Bert Adams Scout Camp</div>
+                    <div class="camp-location">Georgia</div>
+                    <div class="camp-dates">June 12-18</div>
+                </div>
+            </div>
+        </section>
+        <section id="prev">
+            <h2>Previous Campouts</h2>
+            <div class="campout-timeline-grid">
+                <div class="year-block">
+                    <div class="year">2020</div>
+                    <ul>
+                        <li><span class="month">Jan</span> Florida Keys</li>
+                        <li><span class="month">Feb</span> Wall Springs Park, Tarpon Springs, FL</li>
+                        <li><span class="month">Mar</span> Brooksville Airport, Brooksville, FL</li>
+                        <li><span class="month">Apr</span> Camp Soule, Clearwater, FL <span class="cancelled">Covid Cancelled</span></li>
+                        <li><span class="month">May</span> Tree Hoppers - Dade City, FL <span class="cancelled">Covid Cancelled</span></li>
+                        <li><span class="month">Jun</span> Washington DC <span class="cancelled">Covid Cancelled</span></li>
+                    </ul>
+                </div>
+                <div class="year-block">
+                    <div class="year">2019</div>
+                    <ul>
+                        <li><span class="month">Jan</span> Peace River - Arcadia, AL</li>
+                        <li><span class="month">Feb</span> Green Swamp - Hampton Track - Polk City, FL</li>
+                        <li><span class="month">Mar</span> Flaming Arrow Scout Reservation, Lakes Wales, FL</li>
+                        <li><span class="month">Apr</span> Flaming Arrow Scout Reservation, Lakes Wales, FL</li>
+                        <li><span class="month">May</span> Fort Wilderness / Aquatica</li>
+                        <li><span class="month">Jun</span> Camp Thunder - Molena, GA</li>
+                        <li><span class="month">Sep</span> Patrick Air force Base - Brevard County, FL</li>
+                        <li><span class="month">Oct</span> Weeki Wachee River - Weeki Wachee, FL</li>
+                        <li><span class="month">Nov</span> Santos Trailhead, Ocala, FL</li>
+                        <li><span class="month">Nov</span> Smith Gun Range - East Palatka, FL</li>
+                    </ul>
+                </div>
+                <div class="year-block">
+                    <div class="year">2018</div>
+                    <ul>
+                        <li><span class="month">Jan</span> Cloudmont Ski Resort - Mentone, AL</li>
+                        <li><span class="month">Feb</span> Lakewood Retreat - Brooksville, FL / (Sandhill Scout Reservation)</li>
+                        <li><span class="month">Mar</span> Hidden Lakes Airport - Young Eagles Program - New Port Richey, FL / (Crews Lake Wilderness park)</li>
+                        <li><span class="month">Apr</span> Sun Coast Trail - New Port Richey, FL / (Crews Lake Wilderness park)</li>
+                        <li><span class="month">May</span> Empower Adeventure - Oldsmar, FL / (Camp Brorein)</li>
+                        <li><span class="month">Jun</span> Skymont Scout Reservation - Altamont, TN</li>
+                        <li><span class="month">Sep</span> Weeki Wachee River - Weeki Wachee, FL</li>
+                        <li><span class="month">Oct</span> Beaumont Ranch - Land O Lakes, FL</li>
+                        <li><span class="month">Nov</span> Silver Dollar Shooters Club - Odessa, FL</li>
+                        <li><span class="month">Dec</span> Anclote Island - Tarpon Springs, FL</li>
+                    </ul>
+                </div>
+                <div class="year-block">
+                    <div class="year">2017</div>
+                    <ul>
+                        <li><span class="month">Jan</span> Green Swamp West Tract - Dade City, FL</li>
+                        <li><span class="month">Feb</span> Flaming Arrow Scout Reservation - Lake Wales, FL</li>
+                        <li><span class="month">Mar</span> Camp Owen J Brorein - Odessa, FL</li>
+                        <li><span class="month">Apr</span> Sun N Fun Flyin - Lakeland, FL</li>
+                        <li><span class="month">May</span> Disney Fort Wilderness / Typhoon Lagoon - Lake Buena Vists, FL</li>
+                        <li><span class="month">Jun</span> Summer Camp - Rainey Mountain - Clayton, GA</li>
+                        <li><span class="month">Sep</span> AquaKnots - Camp Soule - Clearwater, FL</li>
+                        <li><span class="month">Oct</span> Weeki Wachee River - Weeki Wachee, FL</li>
+                        <li><span class="month">Nov</span> Smith Gun Range - East Palatka, FL</li>
+                        <li><span class="month">Dec</span> Flaming Arrow Scout Reservation - Lake Wales, FL</li>
+                    </ul>
+                </div>
+                <div class="year-block">
+                    <div class="year">2016</div>
+                    <ul>
+                        <li><span class="month">Jan</span> Sand Hill Boy Scout Camp - Brooksville, FL</li>
+                        <li><span class="month">Feb</span> Camp Brorein - Odessa, FL</li>
+                        <li><span class="month">Mar</span> Wall Springs Park - Palm Harbor, FL</li>
+                        <li><span class="month">Apr</span> Starkey Park - Trinity, FL</li>
+                        <li><span class="month">May</span> Ross Prairie Campground - Dunnellon, FL (Rainbow River)</li>
+                        <li><span class="month">Jun</span> Summer Camp - Camp Olmstead, NC</li>
+                        <li><span class="month">Oct</span> MacDill Air Force Base - Tampa, FL</li>
+                        <li><span class="month">Nov</span> Smith Gun Range - East Palatka, FL</li>
+                        <li><span class="month">Dec</span> Serenova Tract (Starkey) - Land O Lakes, FL</li>
+                    </ul>
+                </div>
+                <div class="year-block">
+                    <div class="year">2015</div>
+                    <ul>
+                        <li><span class="month">Jan</span> Sand Hill - Brooksville, FL</li>
+                        <li><span class="month">Feb</span> Wall Springs Park - Palm Harbor, FL</li>
+                        <li><span class="month">Mar</span></li>
+                        <li><span class="month">Apr</span> Otter Springs - Trenton, FL</li>
+                        <li><span class="month">May</span> Fort Wilderness - Lake Buena Vista, FL</li>
+                        <li><span class="month">Jun</span> Summer Camp - Bert Adams Summer Camp - Covington, GA</li>
+                        <li><span class="month">Sep</span> Camp Soule / Aquaknots - Clearwater, FL</li>
+                        <li><span class="month">Oct</span> Crews Lake - Springhill, FL</li>
+                        <li><span class="month">Nov</span></li>
+                        <li><span class="month">Dec</span></li>
+                    </ul>
+                </div>
+                <div class="year-block">
+                    <div class="year">2014</div>
+                    <ul>
+                        <li><span class="month">Jan</span> Starkey Park - Trinity, FL</li>
+                        <li><span class="month">Feb</span></li>
+                        <li><span class="month">Mar</span> Florida Caverns State Park - Marianna, FL</li>
+                        <li><span class="month">Apr</span> Sun N Fun Flyin - Lakeland, FL</li>
+                        <li><span class="month">May</span> Disney Fort Wilderness - Lake Buena Vists, FL</li>
+                        <li><span class="month">Jun</span> Camp Daniel Boone - Canton, NC</li>
+                        <li><span class="month">Sep</span> Camp Soule / Aquaknots - Clearwater, FL</li>
+                        <li><span class="month">Oct</span> Fort Desoto - Tierra Verde, FL</li>
+                        <li><span class="month">Nov</span> Smith Gun Range - East Palatka, FL</li>
+                        <li><span class="month">Dec</span> Serenova Tract (Starkey) - Land O Lakes, FL</li>
+                    </ul>
+                </div>
+                <div class="year-block">
+                    <div class="year">2013</div>
+                    <ul>
+                        <li><span class="month">Jan</span> Sand Hill (Brooksville Raid) - Brooksville, FL</li>
+                        <li><span class="month">Feb</span> Crews Lake - Springhill, FL</li>
+                        <li><span class="month">Mar</span> Wall Springs Park - Palm Harbor, FL</li>
+                        <li><span class="month">Apr</span> Camp La-No-Che</li>
+                        <li><span class="month">May</span> Disney Fort Wilderness - Lake Buena Vists, FL</li>
+                        <li><span class="month">Jun</span> Summer Camp - Raven Knob, NC</li>
+                        <li><span class="month">Sep</span> Camp Soule / Aquaknots - Clearwater, FL</li>
+                        <li><span class="month">Oct</span> Smith Gun Range - East Palatka, FL</li>
+                        <li><span class="month">Nov</span> Sand Hill - Brooksville, FL</li>
+                        <li><span class="month">Dec</span> Serenova Tract (Starkey) - Land O Lakes, FL</li>
+                    </ul>
+                </div>
+                <div class="year-block">
+                    <div class="year">2012</div>
+                    <ul>
+                        <li><span class="month">Jan</span> Highland Hammock Park</li>
+                        <li><span class="month">Feb</span> Lakewood Retreat</li>
+                        <li><span class="month">Mar</span> Crystal River</li>
+                        <li><span class="month">Apr</span> Camp LeNoche / SeaWorld</li>
+                        <li><span class="month">May</span> Suwannne River</li>
+                        <li><span class="month">Jun</span> Summer Camp - Skymont</li>
+                        <li><span class="month">Sep</span></li>
+                        <li><span class="month">Oct</span></li>
+                        <li><span class="month">Nov</span></li>
+                        <li><span class="month">Dec</span></li>
+                    </ul>
+                </div>
+                <div class="year-block">
+                    <div class="year">2011</div>
+                    <ul>
+                        <li><span class="month">Jan</span></li>
+                        <li><span class="month">Feb</span></li>
+                        <li><span class="month">Mar</span></li>
+                        <li><span class="month">Apr</span></li>
+                        <li><span class="month">May</span></li>
+                        <li><span class="month">Jun</span></li>
+                        <li><span class="month">Sep</span> Fantasy of Flight</li>
+                        <li><span class="month">Oct</span> Sandhill</li>
+                        <li><span class="month">Nov</span> Hillsborough State Park</li>
+                        <li><span class="month">Dec</span> Bigfoot Wilderness</li>
+                    </ul>
+                </div>
+                <div class="year-block">
+                    <div class="year">Older</div>
+                    <ul>
+                        <li><span class="month">Jan 2010</span> Brooksville Raid - Sandhill</li>
+                        <li><span class="month">Nov 2009</span> Starkey Park</li>
+                        <li><span class="month">Oct 2009</span> Twin Rivers District Camporee</li>
+                        <li><span class="month">Feb 2008</span> Camp Lone Oak</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

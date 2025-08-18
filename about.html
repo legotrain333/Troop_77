@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Troop 77</title>
+  <link rel="icon" type="image/webp" href="BSA_Logo.webp">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      background: linear-gradient(135deg, #e2eafc 0%, #b6ccfe 100%);
+      margin: 0;
+      padding: 0;
+      color: #222;
+    }
+    header {
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat, #002f6c;
+      color: #fff;
+      padding: 2.5rem 0 1.5rem 0;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 2px 12px rgba(0,47,108,0.10);
+    }
+    header::after {
+      content: '';
+      position: absolute;
+      left: 0; right: 0; top: 0; bottom: 0;
+      background: rgba(0,47,108,0.55);
+      z-index: 1;
+    }
+    header > * {
+      position: relative;
+      z-index: 2;
+    }
+    .bsa-logo-header {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 0.5rem;
+      background: #fff;
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+      object-fit: contain;
+    }
+    header h1 {
+      font-size: 2.3rem;
+      font-weight: 700;
+      margin: 0.7rem 0 0 0;
+      letter-spacing: 2px;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    }
+    .subtitle {
+      font-size: 1.1rem;
+      font-weight: 400;
+      margin-top: 0.5rem;
+      color: #ffd700;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    }
+    .back-home-bar {
+      text-align: left;
+      max-width: 900px;
+      margin: 0 auto 0.5rem auto;
+      padding-left: 1.2rem;
+    }
+    .back-home-btn {
+      display: inline-flex;
+      align-items: center;
+      background: #00509e;
+      color: #fff;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 1.08rem;
+      border-radius: 6px;
+      padding: 0.5em 1.2em 0.5em 1em;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+      margin-top: 0.5rem;
+      transition:background 0.2s, color 0.2s;
+      border: none;
+      cursor: pointer;
+      gap: 0.5em;
+    }
+    .back-home-btn:hover {
+      background: #ffd700;
+      color: #002f6c;
+    }
+    .motto {
+      font-size: 1.15rem;
+      color: #003366;
+      text-align: center;
+      margin: 2rem auto 2.5rem auto;
+      font-style: italic;
+      background: #f7faff;
+      border-radius: 12px;
+      max-width: 750px;
+      padding: 1.2rem 1.5rem 1.5rem 1.5rem;
+      box-shadow: 0 4px 18px rgba(0,47,108,0.08);
+    }
+    main {
+      max-width: 900px;
+      margin: 0 auto 2.5rem auto;
+      background: #fff;
+      padding: 2.5rem 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+    }
+    h2 {
+      color: #00509e;
+      margin-top: 2.2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #e2eafc;
+      padding-bottom: 0.3rem;
+    }
+    h3 {
+      color: #003366;
+      margin-top: 2rem;
+      margin-bottom: 0.7rem;
+    }
+    .section-block {
+      margin-bottom: 2.2rem;
+    }
+    .info-link {
+      display: inline-block;
+      background: #00509e;
+      color: #fff;
+      padding: 0.6em 1.5em;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 700;
+      margin: 0.5em 0.5em 0.5em 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+      transition: background 0.2s;
+    }
+    .info-link:hover {
+      background: #ffd700;
+      color: #002f6c;
+    }
+    .contact-list {
+      margin: 1.2em 0 0 0;
+      padding: 0;
+      list-style: none;
+      font-size: 1.08em;
+    }
+    .contact-list li {
+      margin-bottom: 0.5em;
+    }
+    @media (max-width: 700px) {
+      main {
+        padding: 1rem 0.3rem;
+      }
+      .bsa-logo-header {
+        width: 48px;
+        height: 48px;
+      }
+      header h1 {
+        font-size: 1.2rem;
+      }
+      .motto {
+        font-size: 0.98rem;
+        padding: 0.7rem 0.3rem 1rem 0.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="back-home-bar">
+      <a href="index.html" class="back-home-btn">
+        <img src="BSA_Logo.webp" alt="BSA Logo" style="height:1.3em;width:1.3em;vertical-align:middle;margin-right:0.5em;border-radius:50%;background:#fff;box-shadow:0 1px 4px rgba(0,0,0,0.10);"> Back to Home
+      </a>
+    </div>
+    <img src="BSA_Logo.webp" alt="BSA Logo" class="bsa-logo-header">
+    <h1>About Troop 77</h1>
+  <div class="subtitle"></div>
+  </header>
+  <main>
+    <section class="section-block">
+      <h2>About Troop 77</h2>
+      <p>Welcome to BSA Troop 77! The Charter Representative is the most gracious Trinity Presbyterian Church of Seven Springs located in New Port Richey. Our Troop meets on Mondays at 6:30pm and is very active throughout the year. Our activities consist of monthly Camping, Service Projects, Fundraising, and Training which culminates into a Scout year end Summer Camp. The Troop is supported directly by Trained Scouters as well as strong parental participation. All of whom desire a high caliber Scouting Program as set by BSA National.</p>
+    </section>
+    <section class="section-block">
+      <h2>Troop 77's Mission</h2>
+      <p>The mission of Boy Scout Troop 77 is to provide opportunities for Scouts to learn and develop leadership skills thru a Scouting program that features outdoor activities and hands on instructions in life skills. It is further the mission of Troop 77 to support and sustain the objectives of the Boy Scouts of America in preparing Scouts to make ethical and moral choices over their lifetime.</p>
+    </section>
+    <section class="section-block">
+      <h2>Troop 77's Vision</h2>
+      <p>Scouting is a lifetime of learning so we envision a Scouting program where all Scouts are prepared for life’s challenges and that they have the opportunity to develop and mature in citizenship, service and leadership within a safe and caring environment. We will be the premier Troop within the WCFC by wearing the Scout Uniform properly and proudly. We want a strong boy led Troop that has high participation and spirit, with opportunities for advancement, and creates possibilities for fun while keeping in mind the Scout Oath and Law.</p>
+    </section>
+    <section class="section-block">
+      <h2>Joining Troop 77</h2>
+      <p>Troop 77 is located in New Port Richey / Trinity, Florida.  We meet at the Trinity Presbyterian Church of Seven Springs (TPCOSS) on Monday evenings from 6:30PM-8PM.  If you are interested in joining the troop, please come to a meeting and see how much fun we have, click on Contact Us and the Scoutmaster will get back with you.</p>
+      <ul>
+        <li>Boys Age: 10.5 with Arrow of Light</li>
+        <li>Boys Age: 11 without Arrow of Light up to 18.</li>
+      </ul>
+      <p>We camp 10 times per year. Weekend campouts from September-May, and then a week long Summer Camp in June. Taking July and August off.</p>
+      <div>
+        <a class="info-link" href="https://my.scouting.org/more-info/4197fc43-dd98-46aa-8fd8-f5ba01eb1cb9&beascout=true" target="_blank">&#x27A1; Request Info</a>
+        <a class="info-link" href="https://my.scouting.org/VES/OnlineReg/1.0.0/?tu=UF-MB-089taa0077" target="_blank">&#x1F4DD; Fill Out Application</a>
+      </div>
+    </section>
+    <section class="section-block">
+      <h2>Contact Troop 77</h2>
+      <ul class="contact-list">
+        <li><b>Scoutmaster:</b> Dave Davis - <a href="mailto:DDavis-SM@BSATroop77.com">DDavis-SM@BSATroop77.com</a></li>
+        <li><b>Committee Chair:</b> Ken Knoop - <a href="mailto:KKnoop-CM@BSATroop77.com">KKnoop-CM@BSATroop77.com</a></li>
+        <li><b>Webmaster:</b> Dave Davis - <a href="mailto:Webmaster@BSATroop77.com">Webmaster@BSATroop77.com</a></li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

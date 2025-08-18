@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/webp" href="BSA_Logo.webp">
+  
+  <title>Troop 77 Fundraising</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      background: linear-gradient(135deg, #e2eafc 0%, #b6ccfe 100%);
+      color: #222;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat, #002f6c;
+      color: #fff;
+      padding: 2.5rem 0 1.5rem 0;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 2px 12px rgba(0,47,108,0.10);
+    }
+    header::after {
+      content: '';
+      position: absolute;
+      left: 0; right: 0; top: 0; bottom: 0;
+      background: rgba(0,47,108,0.55);
+      z-index: 1;
+    }
+    header > * {
+      position: relative;
+      z-index: 2;
+    }
+    .bsa-logo-header {
+      width: 70px;
+      height: 70px;
+      margin-bottom: 0.5rem;
+      background: #fff;
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+      object-fit: contain;
+    }
+    header h1 {
+      font-size: 2.3rem;
+      font-weight: 700;
+      margin: 0.7rem 0 0 0;
+      letter-spacing: 2px;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    }
+    .subtitle {
+      font-size: 1.1rem;
+      font-weight: 400;
+      margin-top: 0.5rem;
+      color: #ffd700;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    }
+    .back-home-bar {
+      text-align: left;
+      max-width: 900px;
+      margin: 0 auto 0.5rem auto;
+      padding-left: 1.2rem;
+    }
+    .back-home-btn {
+      display: inline-flex;
+      align-items: center;
+      background: #00509e;
+      color: #fff;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 1.08rem;
+      border-radius: 6px;
+      padding: 0.5em 1.2em 0.5em 1em;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+      margin-top: 0.5rem;
+      transition:background 0.2s, color 0.2s;
+      border: none;
+      cursor: pointer;
+      gap: 0.5em;
+    }
+    .back-home-btn:hover {
+      background: #ffd700;
+      color: #002f6c;
+    }
+    main {
+      max-width: 900px;
+      margin: 2em auto;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(0,47,108,0.08);
+      padding: 2em 2.5em 2.5em 2.5em;
+    }
+    h2 {
+      color: #00509e;
+      margin-top: 0;
+    }
+    .event-box {
+      background: #e3f0ff;
+      border-left: 5px solid #00509e;
+      padding: 1.2em 1.5em;
+      border-radius: 8px;
+      margin-bottom: 2em;
+    }
+    .event-box strong {
+      font-size: 1.1em;
+    }
+    .sponsors-section {
+      margin-top: 2.5em;
+    }
+    .sponsor-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2em;
+  margin-top: 1em;
+  margin-bottom: 2em;
+    }
+    .sponsor-list img {
+      width: 100%;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0,47,108,0.07);
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .sponsor-list img:hover {
+      transform: scale(1.04);
+    }
+
+    /* Ensure h3 event titles are always left-aligned and spaced from the grid */
+    .sponsors-section h3 {
+      text-align: left;
+      margin-top: 2.5em;
+      margin-bottom: 0.7em;
+    }
+    
+    .support-section {
+      margin-top: 2.5em;
+      background: #f2f8ff;
+      border-radius: 8px;
+      padding: 1.5em 1.2em;
+    }
+    .support-section ul {
+      margin: 0 0 1em 1.2em;
+    }
+    .donate-btn {
+      display: inline-block;
+      background: #00509e;
+      color: #fff;
+      font-weight: 700;
+      padding: 0.7em 2em;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 1.1em;
+      margin-top: 1em;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+      transition: background 0.2s;
+    }
+    .donate-btn:hover {
+      background: #003366;
+    }
+    @media (max-width: 600px) {
+      main { padding: 1em 0.5em; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="back-home-bar">
+      <a href="index.html" class="back-home-btn">
+        <img src="BSA_Logo.webp" alt="BSA Logo" style="height:1.3em;width:1.3em;vertical-align:middle;margin-right:0.5em;border-radius:50%;background:#fff;box-shadow:0 1px 4px rgba(0,0,0,0.10);"> Back to Home
+      </a>
+    </div>
+    <img src="BSA_Logo.webp" alt="BSA Logo" class="bsa-logo-header">
+    <h1>Troop 77 Fundraising</h1>
+    <div class="subtitle">Support Our Scouts!</div>
+  </header>
+  <main>
+    <h2>Fundraising</h2>
+    <div class="event-box">
+      <strong>Our Next Fundraising event will be:</strong><br>
+      Krispy Kreme Doughnut Breakfast and Carwash<br>
+      <b>April 17th, 2021</b><br>
+      Trinity Presbyterian Church<br>
+      (across from Mitchell Soccer fields)
+      <ul>
+        <li>Box of 1 dozen donuts - $10 per box</li>
+        <li>Carwash - $5 per Vehicle</li>
+        <li>Flyer advertising available - $20-$100</li>
+      </ul>
+      <em>Ask a scout for more information.</em>
+    </div>
+    <p>Our Fundraising events are how we raise money for the scouts to go on some of our more adventurous trips and week long Summer Camp.</p>
+    <p>Our scouts will be out and about in the town in the weeks prior to our Pancake Breakfast. But, if you would like to help support our troop, you do not need to wait. Please reach out to us.</p>
+
+    <div class="support-section">
+      <h2>Support the Troop 77 Family</h2>
+      <p>Looking to Support Businesses of the Troop 77 Family?</p>
+      <ul>
+        <li>Jenny Davis - The Pampered Chef</li>
+        <li>Dave Davis - GeekDesign</li>
+        <li>Ronna Hruska - Scentsy</li>
+      </ul>
+      <h3>Donate to Troop 77</h3>
+      <p>Do you have extra camping equipment you would like to donate? Please contact us and let us know what you have.<br>
+      If you would like to make a monetary donation to Troop 77, you can do so through PayPal.</p>
+      <a class="donate-btn" href="https://www.paypal.com/donate?token=PeMVH2nEWecFftgGT6VNCRw6yRfyWzGeWZQv4I1ZYHr3q54uKlfn37ETMHev3UpLhMxsSl3mJJWCdx95">Donate with PayPal</a>
+    </div>
+
+    <div class="sponsors-section">
+      <h2>Sponsors</h2>
+      <p>Troop 77 would like to thank the following businesses that have donated money to Troop 77 during their Pancake Breakfast fundraiser. It is because of their donations that our scouts are able to go to week long Summer Camps out of state. We hope you will also thank them by visiting their businesses!<br>
+      You can click on the images to see the brochures and place mats full screen.</p>
+
+      <details class="sponsor-event" open>
+        <summary>2025 Spring Breakfast</summary>
+        <div class="sponsor-list">
+          <!-- Add sponsor images for 2025 here -->
+        </div>
+      </details>
+      <details class="sponsor-event" open>
+        <summary>2024 Spring Breakfast</summary>
+        <div class="sponsor-list">
+          <img src="sponsors/Final Add Pamphlet Apr 2024_Page_01.jpg" alt="2024 Spring Breakfast Photo">
+          <img src="sponsors/Final Add Pamphlet Apr 2024_Page_01.jpg" alt="2024 Spring Breakfast Photo">
+        </div>
+      </details>
+      <details class="sponsor-event">
+        <summary>2023 Fall Breakfast</summary>
+        <div class="sponsor-list">
+          <!-- Add sponsor images for 2023 here -->
+        </div>
+      </details>
+      <details class="sponsor-event">
+        <summary>2022 Spring Breakfast</summary>
+        <div class="sponsor-list">
+          <!-- Add sponsor images for 2022 here -->
+        </div>
+      </details>
+      <details class="sponsor-event">
+        <summary>2021 Fall Breakfast</summary>
+        <div class="sponsor-list">
+          <!-- Add sponsor images for 2021 here -->
+        </div>
+      </details>
+      <details class="sponsor-event">
+        <summary>2021 Spring Breakfast</summary>
+        <div class="sponsor-list">
+          <!-- Add sponsor images for 2021 here -->
+        </div>
+      </details>
+      <details class="sponsor-event">
+        <summary>2019 Fall Breakfast</summary>
+        <div class="sponsor-list">
+          <!-- Add sponsor images for 2019 here -->
+        </div>
+      </details>
+      <details class="sponsor-event">
+        <summary>2019 Spring Breakfast</summary>
+        <div class="sponsor-list">
+          <!-- Add sponsor images for 2019 here -->
+        </div>
+      </details>
+      <details class="sponsor-event">
+        <summary>2018 Fall Breakfast</summary>
+        <div class="sponsor-list">
+          <!-- Add sponsor images for 2018 here -->
+        </div>
+      </details>
+      <details class="sponsor-event">
+        <summary>2018 Spring Breakfast</summary>
+        <div class="sponsor-list">
+          <!-- Add sponsor images for 2018 here -->
+        </div>
+      </details>
+      <details class="sponsor-event">
+        <summary>2017 Fall Pancake Breakfast</summary>
+        <div class="sponsor-list">
+          <!-- Add sponsor images for 2017 here -->
+        </div>
+      </details>
+      <details class="sponsor-event">
+        <summary>2017 Spring Pancake Breakfast</summary>
+        <div class="sponsor-list">
+          <!-- Add sponsor images for 2017 here -->
+        </div>
+      </details>
+      <details class="sponsor-event">
+        <summary>2016 Fall Pancake Breakfast</summary>
+        <div class="sponsor-list">
+          <!-- Add sponsor images for 2016 here -->
+        </div>
+      </details>
+      <details class="sponsor-event">
+        <summary>2016 Spring Pancake Breakfast</summary>
+        <div class="sponsor-list">
+          <!-- Add sponsor images for 2016 here -->
+        </div>
+      </details>
+   <style> .sponsor-event {
+      margin-bottom: 1.5em;
+      border-radius: 8px;
+      background: #f7faff;
+      box-shadow: 0 2px 8px rgba(0,47,108,0.06);
+      border: 1.5px solid #e2eafc;
+      padding: 0.5em 0.7em 0.7em 0.7em;
+      transition: box-shadow 0.2s;
+    }
+    .sponsor-event[open] {
+      box-shadow: 0 6px 24px rgba(0,47,108,0.13);
+    }
+    .sponsor-event summary {
+      font-size: 1.18em;
+      font-weight: 700;
+      color: #003366;
+      cursor: pointer;
+      outline: none;
+      padding: 0.5em 0;
+      margin-bottom: 1em;
+      background: none;
+      border: none;
+      list-style: none;
+    }
+    .sponsor-event summary::-webkit-details-marker {
+      display: none;
+    }</style>
+    </div>
+
+  </main>
+</body>
+</html>
