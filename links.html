@@ -140,6 +140,31 @@
             background: #ffd700;
             color: #002f6c;
         }
+         .link-nav {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 1.1rem 0 0.3rem 0;
+      z-index: 3;
+      position: relative;
+      flex-wrap: wrap;
+    }
+    .link-nav a {
+      background: #00509e;
+      color: #fff;
+      padding: 0.5rem 1.1rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 700;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+      transition: background 0.2s, color 0.2s;
+      margin-bottom: 0.3rem;
+    }
+    .link-nav a:hover {
+      background: #ffd700;
+      color: #002f6c;
+    }
     </style>
 </head>
 <body>
@@ -152,51 +177,71 @@
         </div>
         <img src="BSA_Logo.webp" alt="BSA Logo" class="bsa-logo-header">
         <h1>Troop 77 Helpful Links</h1>
+         <nav class="link-nav">
+            <a href="#local">Local Links</a>
+            <a href="#troops">Troops</a>
+            <a href="#packs">Packs</a>
+            <a href="#national">National Links</a>
+            <a href="#helpfull">Helpful Links</a>
+            <a href="#state">State Parks</a>
+            <a href="#summer">Summer Camps</a>
+            <a href="#camp">Camping Sites</a>
+            <a href="#menu">Menu Ideas</a>
+        </nav>
     </header>
     <main>
+        <section id="local">
         <div class="section-label">Local Links</div>
         <ul class="link-list">
             <li><a href="http://www.wcfcbsa.org/">Greater Tampa Bay Area Council</a></li>
-            <li><a href="#">SunCoast District</a></li>
-            <li><a href="#">Florida Trail Association</a></li>
-            <li><a href="#">MOSI Scouts</a></li>
-            <li><a href="#">MOSI Scouts Schedule</a></li>
-            <li><a href="#">Pasco County Environmental Education</a></li>
-            <li><a href="#">Trinity Presbyterian Church of Seven Springs</a></li>
-            <li><a href="#">Order of the Arrow</a></li>
+            <li><a href="https://tampabayscouting.org/districts/suncoast-district">SunCoast District</a></li>
+            <li><a href="http://www.floridatrail.org/">Florida Trail Association</a></li>
+            <li><a href="http://www.mosi.org/education/mosi-scouts.aspx">MOSI Scouts</a></li>
+            <li><a href="http://www.mosi.org/userfiles/files/MOSIBoyScoutProgramsSeptember2016-June2017%20(1).pdf">MOSI Scouts Schedule</a></li>
+            <li><a href="http://www.pascocountyfl.net/index.aspx?NID=616">Pasco County Environmental Education</a></li>
+            <li><a href="http://tpcoss.org/">Trinity Presbyterian Church of Seven Springs</a></li>
+            <li><a href="http://uhtoyehhuttee.org/">Order of the Arrow</a></li>
         </ul>
-        <div class="section-label">--- Troops ---</div>
+        </section>
+        <section id="troops">
+        <div class="section-label">Troops</div>
         <ul class="link-list">
-            <li><a href="#">Troop 177 - New Port Richey, FL</a></li>
-            <li><a href="#">Troop 24 - New Port Richey, FL</a></li>
-            <li><a href="#">Troop 8 - New Port Richey, FL</a></li>
-            <li><a href="#">Troop 475 - Palm Harbor, FL</a></li>
-            <li><a href="#">Troop 48 - Tarpon Springs, FL</a></li>
-            <li><a href="#">Troop 9 - Tarpon Springs, FL</a></li>
-            <li><a href="#">Troop 40 - Hudson, FL</a></li>
-            <li><a href="#">Troop 8 - New Port Richey</a></li>
-            <li><a href="#">Troop 68 - Odessa</a></li>
-            <li><a href="#">Troop 149 - Wesley Chapel</a></li>
-            <li><a href="#">Troop 2 - Wesley Chapel</a></li>
-            <li><a href="#">Troop 33 - Land O Lakes</a></li>
-            <li><a href="#">Troop 707 - Land O Lakes</a></li>
+            <li><a href="https://www.troopwebhost.org/Troop177Trinity/">Troop 177 - New Port Richey, FL</a></li>
+            <li><a href="https://scoutlander.com/publicsite/unithome.aspx?UID=22504">Troop 24 - New Port Richey, FL</a></li>
+            <li><a href="http://www.troopwebhost.org/Troop8NEWPORTRICHEY/">Troop 8 - New Port Richey, FL</a></li>
+            <li><a href="http://www.bsatroop475.info/">Troop 475 - Palm Harbor, FL</a></li>
+            <li><a href="http://www.tstroop48.com/">Troop 48 - Tarpon Springs, FL</a></li>
+            <li><a href="https://troop9tarponspring.wixsite.com/troop9">Troop 9 - Tarpon Springs, FL</a></li>
+            <li><a href="https://www.facebook.com/BoyScoutTroop40">Troop 40 - Hudson, FL</a></li>
+            <li><a href="https://www.troopwebhost.org/Troop8NEWPORTRICHEY/">Troop 8 - New Port Richey</a></li>
+            <li><a href="http://www.troopwebhost.org/Troop68Odessa/">Troop 68 - Odessa</a></li>
+            <li><a href="http://www.troopwebhost.org/Troop149Lutz/">Troop 149 - Wesley Chapel</a></li>
+            <li><a href="http://www.troopwebhost.org/Troop2WesleyChapel/">Troop 2 - Wesley Chapel</a></li>
+            <li><a href="http://www.troopwebhost.org/Troop33LandOLakes/">Troop 33 - Land O Lakes</a></li>
+            <li><a href="http://www.troopwebhost.org/Troop707LandOLakes/">Troop 707 - Land O Lakes</a></li>
         </ul>
-        <div class="section-label">--- Packs ---</div>
+        </section>
+        <section id="packs">
+        <div class="section-label">Packs</div>
         <ul class="link-list">
-            <li><a href="#">Pack 7 - Trinity, FL</a></li>
-            <li><a href="#">Pack 8 - New Port Richey, FL</a></li>
-            <li><a href="#">Pack 148 - Wesley Chapel, FL</a></li>
-            <li><a href="#">Pack 203 - Wesley Chapel, FL</a></li>
-            <li><a href="#">Pack 323 - Land O' Lakes, FL</a></li>
-            <li><a href="#">Pack 86 - Hudson, FL</a></li>
+            <li><a href="https://www.facebook.com/groups/330718650439653/">Pack 7 - Trinity, FL</a></li>
+            <li><a href="http://www.scoutlander.com/publicsite/unithome.aspx?UID=27685">Pack 8 - New Port Richey, FL</a></li>
+            <li><a href="https://wesleychapel148.mypack.us/aboutus">Pack 148 - Wesley Chapel, FL</a></li>
+            <li><a href="http://www.usbbs.org/pack203/">Pack 203 - Wesley Chapel, FL</a></li>
+            <li><a href="http://pack323landolakes.scoutlander.com/publicsite/unithome.aspx?UID=25209">Pack 323 - Land O' Lakes, FL</a></li>
+            <li><a href="https://www.facebook.com/pack86hudson/">Pack 86 - Hudson, FL</a></li>
         </ul>
+        </section>
         <div class="divider"></div>
+        <section id="national">
         <div class="section-label">National Links</div>
         <ul class="link-list">
             <li><a href="#">BSA National Council</a></li>
             <li><a href="http://www.scouting.org/">scouting.org</a></li>
         </ul>
+        </section>
         <div class="divider"></div>
+        <section id="helpfull">
         <div class="section-label">Helpful Links</div>
         <ul class="link-list">
             <li><a href="#">The Scout Zone</a></li>
@@ -216,7 +261,9 @@
             <li><a href="#">Citizenship in the Community - Letter to Senator.</a></li>
             <li><a href="#">Scout Skillz Challenges</a></li>
         </ul>
+        </section>
         <div class="divider"></div>
+        <section id="state">
         <div class="section-label">State Parks</div>
         <ul class="link-list">
             <li><a href="#">Florida State Parks</a></li>
@@ -224,7 +271,9 @@
             <li><a href="#">Alabama State Parks</a></li>
             <li><a href="#">South Carolina State Parks</a></li>
         </ul>
+        </section>
         <div class="divider"></div>
+        <section id="summer">
         <div class="section-label">Summer Camps</div>
         <ul class="link-list">
             <li><a href="#">Camp Olmstead (2016 Summer Camp) - Virginia</a></li>
@@ -258,7 +307,9 @@
             <li><a href="#">Sand Hill Scout Reservation - Florida</a></li>
             <li><a href="#">Sea Base - Florida</a></li>
         </ul>
+        </section>
         <div class="divider"></div>
+        <section id="camp">
         <div class="section-label">Camping Sites</div>
         <ul class="link-list">
             <li><a href="#">Primitive Sites at Florida State Parks</a></li>
@@ -271,7 +322,9 @@
             <li><a href="#">Best Camping Near Tampa Bay</a></li>
             <li><a href="#">Top Florida Camping Sites per Region</a></li>
         </ul>
+        </section>
         <div class="divider"></div>
+        <section id="menu">
         <div class="section-label">Menu Ideas</div>
         <ul class="link-list">
             <li><a href="#">Boy Scout Trail Camping Recipes</a></li>
@@ -281,6 +334,7 @@
             <li><a href="#">Recipes.Com Camping Recipes</a></li>
             <li><a href="#">R40+ of the BEST Camping Recipes</a></li>
         </ul>
+        </section>
     </main>
 </body>
 </html>

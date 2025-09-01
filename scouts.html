@@ -128,6 +128,114 @@
         font-size: 1.2rem;
       }
     }
+    .back-home-bar {
+      text-align: left;
+      max-width: 1050px;
+      margin: 0 auto 0.5rem auto;
+      padding-left: 1.2rem;
+    }
+    .back-home-btn {
+      display: inline-flex;
+      align-items: center;
+      background: #00509e;
+      color: #fff;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 1.08rem;
+      border-radius: 6px;
+      padding: 0.5em 1.2em 0.5em 1em;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+      margin-top: 0.5rem;
+      transition:background 0.2s, color 0.2s;
+      border: none;
+      cursor: pointer;
+      gap: 0.5em;
+    }
+    .back-home-btn:hover {
+      background: #ffd700;
+      color: #002f6c;
+    }
+    .scout-nav {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 1.1rem 0 0.3rem 0;
+      z-index: 3;
+      position: relative;
+      flex-wrap: wrap;
+    }
+    .scout-nav a {
+      background: #00509e;
+      color: #fff;
+      padding: 0.5rem 1.1rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 700;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+      transition: background 0.2s, color 0.2s;
+      margin-bottom: 0.3rem;
+    }
+    .scout-nav a:hover {
+      background: #ffd700;
+      color: #002f6c;
+    }
+    .section-block {
+      background: #f7faff;
+      border-radius: 14px;
+      box-shadow: 0 2px 12px rgba(0,47,108,0.07);
+      margin-bottom: 2.5rem;
+      padding: 2.2rem 1.5rem 1.5rem 1.5rem;
+      border: 1.5px solid #e2eafc;
+      transition: box-shadow 0.2s;
+    }
+    .section-block:hover {
+      box-shadow: 0 6px 24px rgba(0,47,108,0.13);
+    }
+  </style>
+  <style>
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      overflow: auto;
+      background: rgba(0,0,0,0.45);
+      transition: opacity 0.2s;
+    }
+    .modal-content {
+      background: #fff;
+      margin: 5% auto;
+      padding: 2rem 2.2rem 1.5rem 2.2rem;
+      border: 1.5px solid #e2eafc;
+      border-radius: 14px;
+      max-width: 600px;
+      box-shadow: 0 6px 32px rgba(0,47,108,0.18);
+      position: relative;
+      font-size: 1.08rem;
+      color: #222;
+    }
+    .modal-content h3 {
+      margin-top: 0;
+      color: #00509e;
+      font-size: 1.3rem;
+    }
+    .close {
+      color: #aaa;
+      position: absolute;
+      top: 1.1rem;
+      right: 1.3rem;
+      font-size: 2rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+    .close:hover {
+      color: #00509e;
+    }
   </style>
 </head>
 <body>
@@ -149,7 +257,7 @@
       <a href="#positions">Positions</a>
       <a href="#patrol">Patrol Method</a>
       <a href="#eagles">Eagle Scouts</a>
-      <a href="#documents">Documents</a>
+      <!-- <a href="#documents">Documents</a> -->
       
     </nav>
   </header>
@@ -1119,123 +1227,13 @@
       </div>
    
 
-    <section class="section-block" id="documents">
+    <!-- <section class="section-block" id="documents">
       <h2 style="margin-top:0.2em;">Documents</h2>
       <p>Links to important documents and resources will be posted here.</p>
-    </section>
+    </section> -->
 
     
   </main>
-  <style>
-    .back-home-bar {
-      text-align: left;
-      max-width: 1050px;
-      margin: 0 auto 0.5rem auto;
-      padding-left: 1.2rem;
-    }
-    .back-home-btn {
-      display: inline-flex;
-      align-items: center;
-      background: #00509e;
-      color: #fff;
-      font-weight: 700;
-      text-decoration: none;
-      font-size: 1.08rem;
-      border-radius: 6px;
-      padding: 0.5em 1.2em 0.5em 1em;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.07);
-      margin-top: 0.5rem;
-      transition:background 0.2s, color 0.2s;
-      border: none;
-      cursor: pointer;
-      gap: 0.5em;
-    }
-    .back-home-btn:hover {
-      background: #ffd700;
-      color: #002f6c;
-    }
-    .scout-nav {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin: 1.1rem 0 0.3rem 0;
-      z-index: 3;
-      position: relative;
-      flex-wrap: wrap;
-    }
-    .scout-nav a {
-      background: #00509e;
-      color: #fff;
-      padding: 0.5rem 1.1rem;
-      border-radius: 6px;
-      text-decoration: none;
-      font-size: 1rem;
-      font-weight: 700;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.07);
-      transition: background 0.2s, color 0.2s;
-      margin-bottom: 0.3rem;
-    }
-    .scout-nav a:hover {
-      background: #ffd700;
-      color: #002f6c;
-    }
-    .section-block {
-      background: #f7faff;
-      border-radius: 14px;
-      box-shadow: 0 2px 12px rgba(0,47,108,0.07);
-      margin-bottom: 2.5rem;
-      padding: 2.2rem 1.5rem 1.5rem 1.5rem;
-      border: 1.5px solid #e2eafc;
-      transition: box-shadow 0.2s;
-    }
-    .section-block:hover {
-      box-shadow: 0 6px 24px rgba(0,47,108,0.13);
-    }
-  </style>
-  <style>
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      left: 0;
-      top: 0;
-      width: 100vw;
-      height: 100vh;
-      overflow: auto;
-      background: rgba(0,0,0,0.45);
-      transition: opacity 0.2s;
-    }
-    .modal-content {
-      background: #fff;
-      margin: 5% auto;
-      padding: 2rem 2.2rem 1.5rem 2.2rem;
-      border: 1.5px solid #e2eafc;
-      border-radius: 14px;
-      max-width: 600px;
-      box-shadow: 0 6px 32px rgba(0,47,108,0.18);
-      position: relative;
-      font-size: 1.08rem;
-      color: #222;
-    }
-    .modal-content h3 {
-      margin-top: 0;
-      color: #00509e;
-      font-size: 1.3rem;
-    }
-    .close {
-      color: #aaa;
-      position: absolute;
-      top: 1.1rem;
-      right: 1.3rem;
-      font-size: 2rem;
-      font-weight: bold;
-      cursor: pointer;
-      transition: color 0.2s;
-    }
-    .close:hover {
-      color: #00509e;
-    }
-  </style>
   <script>
     // Modal logic for all basics and positions
     document.addEventListener('DOMContentLoaded', function() {
